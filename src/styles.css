@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Fester_Bold;
+    src: url(assets/font/Fester_Bold.otf) format('truetype');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(assets/font/Montserrat_Regular.otf) format('truetype');
+}
