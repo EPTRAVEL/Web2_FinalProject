@@ -8,6 +8,7 @@ import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component'
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 import { TintucComponent } from './tintuc/tintuc.component';
 import { TrangchuComponent } from './trangchu/trangchu.component';
+import { TourdulichComponent } from './tourdulich/tourdulich.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
     path: 'trangchu',
     component: TrangchuComponent,
   },
+  {
+    path: 'tourdulich',
+    component: TourdulichComponent,
+  }
 ];
 
 @NgModule({
