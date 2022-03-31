@@ -8,6 +8,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TrangchuComponent } from './trangchu/trangchu.component';
+import { KhuyenmaiComponent } from './khuyenmai/khuyenmai.component';
+import { CactourkhuyenmaiComponent } from './cactourkhuyenmai/cactourkhuyenmai.component';
+import { TintucComponent } from './tintuc/tintuc.component';
+import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component';
+import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +22,12 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     RouterComponent,
     FooterComponent,
+    TrangchuComponent,
+    KhuyenmaiComponent,
+    CactourkhuyenmaiComponent,
+    TintucComponent,
+    NoidungtintucComponent,
+    ThanhtoanComponent,
   ],
   imports: [
     BrowserModule,
