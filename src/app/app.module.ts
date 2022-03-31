@@ -14,6 +14,8 @@ import { CactourkhuyenmaiComponent } from './cactourkhuyenmai/cactourkhuyenmai.c
 import { TintucComponent } from './tintuc/tintuc.component';
 import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component';
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
+import { TourdulichComponent } from './tourdulich/tourdulich.component';
+import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
     TintucComponent,
     NoidungtintucComponent,
     ThanhtoanComponent,
+    TourdulichComponent,
+    ChitiettourComponent,
   ],
   imports: [
     BrowserModule,
