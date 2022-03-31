@@ -1,91 +1,100 @@
-<div class="container-fluid" style="background-image: url(./assets/images/main_background_den.png);">
+<div class="container-fluid">
     <div class="Dangky-content" style="margin-top: 10px;">
         <!-- <div class="space"> -->
-            <app-header style></app-header>
-        </div>
-        <div class="frame">
-            
-            <div style="text-align: center;"><img src="./assets/images/logo/logo.png" max-width="300px" alt="Error" class="logo"></div>
-            <h2>Đăng ký</h2>
-                <p>Để hoàn tất đăng ký, khách hàng vui lòng điền đầy đủ thông tin và nhấn vào nút Đăng ký. Xin chân thành cảm ơn khách hàng</p>
-                <form action="">
-                    <div class="form-row">
-                        <div class="form-row--left">
-                            <label for="hoten">Họ tên <span class="redstar">*</span></label>
-                            <input type="text" id="hoten">
-                        </div>
-                        <div class="form-row--right">
-                            <label for="gioitinh">Giới tính <span class="redstar">*</span></label>
-                            <!-- <input type="text" id="gioitinh"> -->
-                            <span class="gt">
-                                <input type="radio" name="gtinh" id="nam"><span class="gtinh"><span>Nam</span></span>
-                            <input type="radio" name="gtinh" id="nu"><span class="gtinh">Nữ</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-row--left">
-                            <label for="ngaysinh">Ngày sinh<span class="redstar">*</span></label>
-                            <input type="date" id="ngaysinh">
-                        </div>
-                        <div class="form-row--right">
-                            <label for="didong">Di động<span class="redstar">*</span></label>
-                            <input type="text" id="didong">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-row--left">
-                            <label for="cmnd">CMND/CCCD</label>
-                            <input type="text" id="cmnd">
-                        </div>
-                        <div class="form-row--right">
-                            <label for="ngaycap">Ngày cấp</label>
-                            <input type="date" id="ngaycap">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-row--left">
-                            <label for="email">Email<span class="redstar">*</span></label>
-                            <input type="text" id="email">
-                        </div>
-                        <div class="form-row--right">
-                            <label for="diachi">Địa chỉ<span class="redstar">*</span></label>
-                            <input type="text" id="diachi">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-row--left">
-                            <label for="matkhauu">Mật khẩu<span class="redstar">*</span></label>
-                            <input type="text" id="matkhauu">
-                        </div>
-                        <div class="form-row--right">
-                            <label for="nl_matkhau">Nhập lại MK<span class="redstar">*</span></label>
-                            <input type="text" id="nl_matkhau">
-                        </div>
-                    </div>
-
-                </form>
-                <div class="line"></div>
-                <div class="footer-dangky">
-                    <div class="ft-left">
-                        <span id="linktodn" onclick="document.getElementById('modal__container').style.display='flex';">Đăng
-                            nhập</span>
-                        <br>
-                        <br>
-                        <span style="color: rgb(75, 75, 75); font-size: 13px">Hoặc</span>
-                        <br>
-                        <br>
-                        <div class="dn-logo">
-                            <input type="button" value="" id="gg_link-icon" style="background-image: url(./assets/images/ICON/GG.png);">
-                            <input type="button" value="" id="fb_link-icon" style="background-image: url(./assets/images/ICON/FB.png);">
-                            <input type="button" value="" id="tw_link-icon" style="background-image: url(./assets/images/ICON/TW.png);">
-                        </div>
-                    </div>
-                    <div class="ft-center"></div>
-                    <div class="ft-right">
-                        <input onclick="dangky()"type="button" value="Đăng ký" id="btnDangky">
-                    </div>
-                </div>
-        </div>
-
+        <!-- <app-header style></app-header> -->
     </div>
+    <div class="frame">
+
+        <div style="text-align: center;"><img src="./assets/images/logo/logo.png" max-width="300px" alt="Error"
+                class="logo"></div>
+        <h2>Đăng ký</h2>
+        <p>Để hoàn tất đăng ký, khách hàng vui lòng điền đầy đủ thông tin và nhấn vào nút Đăng ký. Xin chân thành cảm ơn
+            khách hàng</p>
+
+
+        <form #regForm="ngForm">
+            <div class="form-row">
+                <div class="form-row--left">
+                    <label for="hoten">Họ tên <span class="redstar">*</span></label>
+                    <input type="text" id="hoten" ngModel >
+                </div>
+                <div class="form-row--right">
+                    <label for="gioitinh">Giới tính <span class="redstar">*</span></label>
+                    <!-- <input type="text" id="gioitinh"> -->
+                    <span class="gt">
+                        <input type="radio" name="gtinh" id="nam"><span class="gtinh"><span>Nam</span></span>
+                        <input type="radio" name="gtinh" id="nu"><span class="gtinh">Nữ</span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row--left">
+                    <label for="ngaysinh">Ngày sinh<span class="redstar">*</span></label>
+                    <input type="date" id="ngaysinh">
+                </div>
+                <div class="form-row--right">
+                    <label for="didong">Di động<span class="redstar">*</span></label>
+                    <input type="text" id="didong">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row--left">
+                    <label for="cmnd">CMND/CCCD</label>
+                    <input type="text" id="cmnd">
+                </div>
+                <div class="form-row--right">
+                    <label for="ngaycap">Ngày cấp</label>
+                    <input type="date" id="ngaycap">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row--left">
+                    <label for="email">Email<span class="redstar">*</span></label>
+                    <input type="text" id="email">
+                </div>
+                <div class="form-row--right">
+                    <label for="diachi">Địa chỉ<span class="redstar">*</span></label>
+                    <input type="text" id="diachi">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-row--left">
+                    <label for="matkhauu">Mật khẩu<span class="redstar">*</span></label>
+                    <input type="text" id="matkhauu">
+                </div>
+                <div class="form-row--right">
+                    <label for="nl_matkhau">Nhập lại MK<span class="redstar">*</span></label>
+                    <input type="text" id="nl_matkhau">
+                </div>
+            </div>
+
+        </form>
+        <div class="line"></div>
+        <div class="footer-dangky">
+            <div class="ft-left">
+                <span id="linktodn" onclick="document.getElementById('modal__container').style.display='flex';">Đăng
+                    nhập</span>
+                <br>
+                <br>
+                <span style="color: rgb(75, 75, 75); font-size: 13px">Hoặc</span>
+                <br>
+                <br>
+                <div class="dn-logo">
+                    <input type="button" value="" id="gg_link-icon"
+                        style="background-image: url(./assets/images/ICON/GG.png);">
+                    <input type="button" value="" id="fb_link-icon"
+                        style="background-image: url(./assets/images/ICON/FB.png);">
+                    <input type="button" value="" id="tw_link-icon"
+                        style="background-image: url(./assets/images/ICON/TW.png);">
+                </div>
+            </div>
+            <div class="ft-center"></div>
+            <div class="ft-right">
+
+                <p>{{regForm.value|json}}</p>
+                <input type="submit" value="Đăng ký" class="btn btn-primary" id="btnDangky">
+            </div>
+        </div>
+    </div>
+
+</div>
