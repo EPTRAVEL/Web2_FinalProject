@@ -1,0 +1,48 @@
+.slider-one {
+  /* height: 330px; */
+}
+.slider-one:first-child {
+  /* background-color: red */
+  border-radius: 15px;
+}
+.carousel-indicators button {
+  color: red !important;
+}
+.row {
+  margin-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+
+.slider-two {
+  position: relative;
+}
+.slider-two div img {
+  width: 40vw;
+}
+
+.slider-two div p {
+  position: absolute;
+  top: 50%;
+  /* left: 100px; */
+  transform: translateY(-50%);
+  transform: translateX(350%);
+  background-color: red;
+  
+}
