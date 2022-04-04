@@ -13,7 +13,7 @@
 }
 .navbar {
   margin-top: 70px;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: rgba(0, 0, 0, 0.2) !important;
   border-radius: 10px;
   height: 35px
 }
@@ -52,4 +52,3 @@
 
 
 
-/* search */

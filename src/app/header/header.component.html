@@ -32,12 +32,34 @@
         <div class=" logo_3 col-3">
             <div class="row align-left">
                 <div class="search col-4">
-                    <input type="search" data-mdb-toggle="animation" data-mdb-animation-reset="true"
-                        data-mdb-animation="slide-out-right" class="col-8 ">
-                    <i class="bi bi-search col-4"></i>
+                    <input type="search" class="col-8 searchInput">
+                    <button class="searchButton" >
+                        <i class="bi bi-search col-4"></i>
+                    </button>
                 </div>
-                <i class="bi bi-heart col-4"></i>
-                <i class="bi bi-person col-4"></i>
+                <div class="col-4">
+                    <button (mouseenter)="changeHeart()" (mouseleave)="changeHeart()">
+                        <i class="bi {{heart}}"></i>
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button (click)="changeHidden()" (mouseenter)="changePerson()" (mouseleave)="changePerson()">
+                        <i class="bi {{person}}"></i>
+                    </button>
+
+                    <div (mouseleave)="changeHidden()" class="drop-person {{hidden}}">
+                        <div class="login">
+                            <span class="">Đăng Nhập</span>
+                            <i class=" bi bi-box-arrow-in-left"></i>
+                        </div>
+                        <div class="reg">
+                            <a  routerLink="/dangky" routerLinkActive="active" class="" >Đăng ký</a>
+                            <i class=" bi bi-person-plus-fill"></i>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
