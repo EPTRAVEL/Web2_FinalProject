@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="background-image: url(./assets/images/main_background_den.png)">
 
     <div class="row">
         <div class="logo_icon col-3">
@@ -9,7 +9,8 @@
                 <a routerLink="/trangchu" routerLinkActive="active" class="nav-link text-light" href="#">Trang chủ</a>
             </li>
             <li class="nav-item dropdown ">
-                <a routerLink="/tourdulich" routerLinkActive="active" class="nav-link text-light" href="#" role="button" data-bs-toggle="dropdown">Tour du lịch</a>
+                <a routerLink="/tourdulich" routerLinkActive="active" class="nav-link text-light" href="#" role="button"
+                    data-bs-toggle="dropdown">Tour du lịch</a>
                 <ul class="dropdown-menu text-light">
                     <li><a class="dropdown-item" href="#">Tour trong nước</a></li>
                     <li><a class="dropdown-item" href="#">Tour ngoài ngước</a></li>
@@ -32,12 +33,22 @@
         <div class=" logo_3 col-3">
             <div class="row align-left">
                 <div class="search col-4">
-                    <input type="search" data-mdb-toggle="animation" data-mdb-animation-reset="true"
-                        data-mdb-animation="slide-out-right" class="col-8 ">
-                    <i class="bi bi-search col-4"></i>
+                    <input type="search" class="col-8 ">
+                    <button>
+                        <i class="bi bi-search col-4"></i>
+                    </button>
                 </div>
-                <i class="bi bi-heart col-4"></i>
-                <i class="bi bi-person col-4"></i>
+                <div  class="col-4">
+                    <button>
+                        <i class="bi bi-heart"></i>
+                    </button>
+                </div>
+                <div  class="col-4">
+                    <button>
+                        <i class="bi bi-person"></i>
+                    </button>
+                </div>
+                
             </div>
         </div>
     </div>
