@@ -13,5 +13,28 @@ export class HeaderComponent implements OnInit {
   hidden : String = 'hidden';
   ngOnInit(): void {
   }
-
+  changeHeart(){
+    if(this.heart=="bi-heart"){
+      this.heart="bi-heart-fill"
+    }
+    else{ 
+      this.heart="bi-heart"
+    }
+  }
+  changePerson(){
+    if(this.person=="bi-person"){
+      this.person="bi-person-fill"
+    }
+    else{ 
+      this.person="bi-person"
+    }
+  }
+  changeHidden(){
+    if(this.hidden=="hidden"){
+      this.hidden=""
+    }
+    else{ 
+      this.hidden="hidden"
+    }
+  }
 }
