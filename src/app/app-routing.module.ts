@@ -9,7 +9,6 @@ import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 import { TintucComponent } from './tintuc/tintuc.component';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import { TourdulichComponent } from './tourdulich/tourdulich.component';
-import { LienheComponent } from './lienhe/lienhe.component';
 
 const routes: Routes = [
   {
@@ -52,10 +51,6 @@ const routes: Routes = [
   {
     path: 'tourdulich',
     component: TourdulichComponent,
-  },
-  {
-    path: 'lienhe',
-    component: LienheComponent,
   }
 ];
 
