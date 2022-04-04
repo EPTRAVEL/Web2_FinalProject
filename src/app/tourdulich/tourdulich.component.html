@@ -1,0 +1,109 @@
+<div class="container" style="width: 80%">
+    <!-- container: fixed
+    container-fluid: full màn hình -->
+    <div class="text-center p-2 mt-3 mb-3 title-tourdulich">
+        <h4 class="font-weight-bold">DU LỊCH MIỀN BẮC</h4>
+    </div>
+    <div>
+        <div class="sapxep-select">
+            <select name="Sắp xếp" class="form-select mb-3">
+                <option value="sapxep">--Sắp xếp theo--</option>
+                <option value="thap-cao">Theo giá thấp đến cao</option>
+                <option value="thap-cao">Theo giá cao đến thấp</option>
+                <option value="thap-cao">Giảm giá nhiều nhất</option>
+            </select>
+        </div>
+    </div>
+    <div class="row m-30">
+        <div class="col-md-3">
+            <div class="locsanpham-select">
+                <h4 class="text-center p-2">LỌC KẾT QUẢ</h4>
+                <div>
+                    <select name="quocgia" id="quocgia" class="form-select select-item">
+                        <option value="0">--Chọn quốc gia--</option>
+                        <option value="1">Tour trong nước</option>
+                        <option value="2">Tour ngoài nước</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="khuvuc" id="khuvuc" class="form-select select-item">
+                        <option value="0">--Chọn khu vực--</option>
+                        <option value="1">Tour trong nước</option>
+                        <option value="2">Tour ngoài nước</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select name="loaihinhtour" id="loaihinhtour" class="form-select select-item">
+                        <option value="trongnuoc">--Loại hình tour--</option>
+                        <option value="trongnuoc">Tour trọn gói</option>
+                        <option value="trongnuoc">Tour gia đình</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="diemdi" id="diemdi" class="form-select select-item">
+                        <option value="0">--Điểm đi--</option>
+                        <option value="3">Hà Nội</option>
+                        <option value="4">TP. Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="diemden" id="diemden" class="form-select select-item">
+                        <option value="0">--Điểm đến--</option>
+                        <option value="5">Pháp</option>
+                        <option value="6">Thụy Sĩ</option>
+                        <option value="7">Nhật Bản</option>
+                        <option value="8">Trung Quốc</option>
+                        <option value="9">Canada</option>
+                        <option value="10">Mỹ</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="songaytour" id="songaytour" class="form-select select-item">
+                        <option value="0">--Số ngày tour--</option>
+                        <option value="4-7">4-7 ngày</option>
+                        <option value="8-14">8-14 ngày</option>
+                        <option value=">14">Trên 14 ngày</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            
+            <div class="category">
+                <div class="card m-2 hover-overlay hover-zoom hover-shadow ripple" *ngFor="let datatour of tour" style="width:300px;">
+                    <img class="card-img-top img-thumnail" src="{{datatour.images[0]}}" alt="error">
+                    <div class="card-body text-center">
+                        <h5 class="card-title m-2">{{datatour.ten_tour}}</h5>
+                        <p class="tour-item__code"> Mã Tour: {{ datatour.ma_tour }}</p>
+                        <p class="tour-item__departure">Nơi khởi hành:
+                            <span> {{ datatour.noikhoihanh }} </span>
+                        </p>
+                        <div class="tour-item__price--current__number">Giá
+                            <span id="tour-item__price--current__number">{{ datatour.giatiennguoilon}}đ</span>/Khách
+                        </div>
+                        <div class="tour-item__price--current">
+                            <button class="btn btn-danger  btn-book">
+                                <i class="bi bi-cart-plus-fill"></i>
+                                Đặt
+                                ngay
+                            </button>
+                            <button class="btn btn-block border border-secondary">
+
+                                Xem chi tiết
+
+                            </button>
+                        </div>
+                        <button class="tour-item__footer__add-to-compare d-inline-flex align-items-center addcomparegrid">
+                            <a href="" class="link-danger"><i class="bi bi-plus-circle-fill"></i> Thêm
+                                vào
+                                yêu thích
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>        
+        </div>
+    </div>
+</div>
