@@ -12,12 +12,26 @@
             khách hàng</p>
 
 
-        <form #regForm="ngForm">
+        <form [formGroup]="regForm">
             <div class="form-row">
                 <div class="form-row--left">
                     <label for="hoten">Họ tên <span class="redstar">*</span></label>
-                    <input type="text" id="hoten" ngModel >
+                    <div>
+                        <input type="text" id="hoTen" placeholder="Họ và Tên" class="form-control"
+                            formControlName="hoTen"
+                            [class.is-invalid]="regForm.controls['hoTen'].invalid&&regForm.controls['hoTen'].touched">
+                        <div class="error-format">
+                            <small class="text-danger" *ngIf="regForm.controls['hoTen'].errors?.['required']">Không được
+                                để
+                                trống</small>
+                            <small class="text-danger"
+                                *ngIf="regForm.controls['hoTen'].errors?.['required']&&regForm.controls['hoTen'].errors?.['minlength']">Và</small>
+                        </div>
+                    </div>
+
+
                 </div>
+
                 <div class="form-row--right">
                     <label for="gioitinh">Giới tính <span class="redstar">*</span></label>
                     <!-- <input type="text" id="gioitinh"> -->
@@ -30,41 +44,91 @@
             <div class="form-row">
                 <div class="form-row--left">
                     <label for="ngaysinh">Ngày sinh<span class="redstar">*</span></label>
-                    <input type="date" id="ngaysinh">
+                    <div>
+                        <input type="date" id="ngaysinh" formControlName="ngaySinh"
+                        [class.is-invalid]="regForm.controls['ngaySinh'].invalid&&regForm.controls['ngaySinh'].touched">
+                    </div>
                 </div>
                 <div class="form-row--right">
                     <label for="didong">Di động<span class="redstar">*</span></label>
-                    <input type="text" id="didong">
+                    <div>
+                        <input type="text" id="didong" placeholder="0326123397" class="form-control"
+                            formControlName="diDong"
+                            [class.is-invalid]="regForm.controls['diDong'].invalid&&regForm.controls['diDong'].touched">
+                        <div class="error-format">
+                            <small class="text-danger" *ngIf="regForm.controls['diDong'].errors?.['required']">Không
+                                được để
+                                trống</small>
+                            <small class="text-danger"
+                                *ngIf="regForm.controls['diDong'].errors?.['minlength']||regForm.controls['diDong'].errors?.['maxlength']">Số
+                                điện thoại phải có 10 chữ số</small>
+                            <small class="text-danger" *ngIf="regForm.controls['diDong'].errors?.['pattern']">Sai Format
+                                số điện thoại</small>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-row--left">
                     <label for="cmnd">CMND/CCCD</label>
-                    <input type="text" id="cmnd">
+                    <div>
+                        <input type="text" id="cmnd" placeholder="0326123397" class="form-control"
+                            formControlName="cMND"
+                            [class.is-invalid]="regForm.controls['cMND'].invalid&&regForm.controls['cMND'].touched">
+                        <small class="text-danger" *ngIf="regForm.controls['cMND'].errors?.['required']">Số CMND không
+                            được để trống</small>
+                        <small class="text-danger" *ngIf="regForm.controls['cMND'].errors?.['pattern']">CMND chỉ được
+                            chứa số</small>
+                    </div>
                 </div>
                 <div class="form-row--right">
                     <label for="ngaycap">Ngày cấp</label>
-                    <input type="date" id="ngaycap">
+                    <div>
+                        <input type="date" id="ngaycap">
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-row--left">
                     <label for="email">Email<span class="redstar">*</span></label>
-                    <input type="text" id="email">
+                    <div>
+                        <input type="text" id="email" placeholder="ngdakhoa@gmail.com" class="form-control"
+                            formControlName="email"
+                            [class.is-invalid]="regForm.controls['email'].invalid&&regForm.controls['email'].touched">
+                        <small class="text-danger" *ngIf="regForm.controls['email'].errors?.['required']">email không
+                            được để trống</small>
+                        <small class="text-danger" *ngIf="regForm.controls['email'].errors?.['email']">Email sai cấu
+                            trúc</small>
+                    </div>
                 </div>
                 <div class="form-row--right">
                     <label for="diachi">Địa chỉ<span class="redstar">*</span></label>
-                    <input type="text" id="diachi">
+                    <div>
+                        <input type="text" id="diachi" placeholder="115 Đinh Chiến Thắng" class="form-control"
+                            formControlName="diaChi"
+                            [class.is-invalid]="regForm.controls['diaChi'].invalid&&regForm.controls['diaChi'].touched">
+                        <small class="text-danger" *ngIf="regForm.controls['diaChi'].errors?.['required']">Địa chỉ không
+                            được để trống</small>
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-row--left">
                     <label for="matkhauu">Mật khẩu<span class="redstar">*</span></label>
-                    <input type="text" id="matkhauu">
+                    <div>
+                        <input type="password" id="pass" placeholder="nhập mật khẩu mới" class="form-control"
+                            formControlName="pass"
+                            [class.is-invalid]="regForm.controls['pass'].invalid&&regForm.controls['pass'].touched"
+                            #pass>
+                    </div>
                 </div>
                 <div class="form-row--right">
                     <label for="nl_matkhau">Nhập lại MK<span class="redstar">*</span></label>
-                    <input type="text" id="nl_matkhau">
+                    <div>
+                        <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu" class="form-control"  [class.is-invalid] = "regForm.errors?.['misMatch']"
+                        formControlName="confirmPass">
+                        <small class="text-danger" *ngIf="regForm.errors?.['misMatch']">Mật khẩu nhập lại không trùng khớp</small>
+                    </div>
                 </div>
             </div>
 
@@ -72,7 +136,7 @@
         <div class="line"></div>
         <div class="footer-dangky">
             <div class="ft-left">
-                <span id="linktodn" onclick="document.getElementById('modal__container').style.display='flex';">Đăng
+                <span id="linktodn">Đăng
                     nhập</span>
                 <br>
                 <br>

@@ -58,13 +58,10 @@
     /* margin-top: 0px; */
 }
 
-.form-row--left>input,
-.form-row--right>input {
+.form-row--left>div,
+.form-row--right>div {
     width: 400px;
-    height: 25px;
-    border-radius: 5px;
-    border: 1px solid rgb(73, 73, 73);
-    font-size: 17px;
+  
 }
 
 .gt {
@@ -207,6 +204,8 @@ input[type="radio"]:last-child {
         margin-right: 30px;
     }
 }
+
+
 
 @media only screen and (max-width: 850px) {
     .form-row--left>label,

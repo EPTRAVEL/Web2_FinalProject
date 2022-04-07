@@ -73,9 +73,9 @@ search{
 .search{
   position: relative;
 }
-.search input{
-  position: absolute;
-  left: -100px
+#search_bar{
+ 
+
 }
 .logo_3 button{
   width: 40px;
@@ -83,4 +83,36 @@ search{
   font-size: 30px;
   background-color: rgba(255, 222, 173,0);
   border: none
+}
+
+.bi-heart-fill, .bi-person-fill{
+  color: white !important;
+}
+
+.login-list{
+  font-family: Montserrat;
+  font-size: 15px;
+  width: 150px;
+
+  color: white;
+
+  text-align: left !important;
+  padding: 0 0px 7px 5px;
+  position: absolute;
+  right: 50px;
+}
+.login-list > div{
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 5px;
+}
+.login-list > div:hover{
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: rgb(172, 108, 255);
+  font-weight:  bold;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none !important;
 }

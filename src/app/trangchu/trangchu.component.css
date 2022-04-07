@@ -44,5 +44,34 @@
   transform: translateY(-50%);
   transform: translateX(350%);
   background-color: red;
-  
+}
+.slider-three{
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 10px;
+  height: 350px;
+  margin: 20px 0;
+}
+.two-col {
+  height: 550px;
+  margin-bottom: 20px;
+  /* background-color: red; */
+}
+.ttdl {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  flex: 28;
+  border-radius: 10px;
+}
+.space {
+  flex: 1;
+}
+.ttqt {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  flex: 10;
+  border-radius: 10px;
+}
+div#carouselExampleIndicators {
+  padding: 0;
+}
+img.d-block.w-100 {
+  border-radius: 15px;
 }
