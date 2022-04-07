@@ -10,9 +10,13 @@
 }
 
 .form-group{
-    margin-left: 55px;
+    margin-left: 52px;
     width: 350px;
-    right: 0px;
+    
+}
+.form-group2{
+    margin-left: 0px;
+    width: 350px;
 }
 .buttons_added {
     opacity:1;
@@ -71,9 +75,11 @@
 
 .hanhkhach{
  width: 350px;
- margin-left: 65px;
- margin-right: 0px;
- margin-bottom: 20px;
+ /* margin-left: 25px;
+ margin-right: 40px;
+ margin-bottom: 20px; */
+ margin: 20px 10px;
+ 
 }
 
 .sl{
@@ -88,7 +94,7 @@
     border-radius: 5px;
     width: 100px;
     height: 35px;
-    margin-left: 52px;
+    margin-left: 10px;
 }
 .text-divider {
     display: flex;
@@ -117,7 +123,7 @@
 .thongtinlienlac{
     border: 1px solid black;
     border-top: none;
-     margin: 20px 150px 20px 20px;
+     margin: 20px 20px 20px 20px;
     width: 850px;
     align-content: center;
 }
