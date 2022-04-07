@@ -15,7 +15,6 @@ import { TintucComponent } from './tintuc/tintuc.component';
 import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component';
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 import { TourdulichComponent } from './tourdulich/tourdulich.component';
-import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { ChitiettourComponent } from './chitiettour/chitiettour.component';
     NoidungtintucComponent,
     ThanhtoanComponent,
     TourdulichComponent,
-    ChitiettourComponent,
   ],
   imports: [
     BrowserModule,
