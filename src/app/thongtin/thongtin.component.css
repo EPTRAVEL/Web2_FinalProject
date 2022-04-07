@@ -1,0 +1,123 @@
+.container{
+    position: relative;
+}
+.thongtin-content{
+    width: 80%;
+    height: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.form-group{
+    margin-left: 55px;
+    width: 350px;
+    right: 0px;
+}
+.buttons_added {
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+    position: absolute;
+    right: 0px;
+}
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color:#FFCC66;
+    height:2.2rem;
+    width:2.0rem;
+    padding:0;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-shadow:1px 1px 1px #fff;
+    border:none;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:50%;
+    right: 10px;
+}
+.is-form.plus {
+    border-radius:50%;
+    right: 10px;
+}
+.input-qty {
+    background-color:#fff;
+    height:2.2rem;
+    width: 35px;
+    text-align:center;
+    font-size:1rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    padding:0;
+    border: none;
+
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+
+.input-qty{
+    margin: 0 10px 0 -8px;
+}
+
+.hanhkhach{
+ width: 350px;
+ margin-left: 65px;
+ margin-right: 0px;
+ margin-bottom: 20px;
+}
+
+.sl{
+    margin-top: 20px;
+    position: relative;
+}
+
+.thongtin-button{
+    font-family: Fester_Bold;
+    background-color:#FFCC66;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    margin-left: 52px;
+}
+.text-divider {
+    display: flex;
+    align-items: center;
+    width: 850px;
+    margin-top: -13px;
+    margin-left: -13px;
+    --text-divider-gap: 1rem;
+}
+
+.text-divider::before,
+.text-divider::after {
+    content: '';
+    height: 1px;
+    background-color: black;
+    flex-grow: 1;
+}
+
+.text-divider::before {
+    margin-right: var(--text-divider-gap);
+}
+
+.text-divider::after {
+    margin-left: var(--text-divider-gap);
+}
+.thongtinlienlac{
+    border: 1px solid black;
+    border-top: none;
+     margin: 20px 150px 20px 20px;
+    width: 850px;
+    align-content: center;
+}
