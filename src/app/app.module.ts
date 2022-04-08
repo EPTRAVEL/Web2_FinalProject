@@ -15,6 +15,9 @@ import { TintucComponent } from './tintuc/tintuc.component';
 import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component';
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 import { TourdulichComponent } from './tourdulich/tourdulich.component';
+import { CommonModule } from '@angular/common';
+
+import { ChitiettourComponent } from './chitiettour/chitiettour.component'; 
 
 @NgModule({
   declarations: [
@@ -30,13 +33,15 @@ import { TourdulichComponent } from './tourdulich/tourdulich.component';
     NoidungtintucComponent,
     ThanhtoanComponent,
     TourdulichComponent,
+    ChitiettourComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

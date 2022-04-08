@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { TourdulichService } from '../service/tourdulich.service';
 
 @Component({
@@ -8,22 +8,40 @@ import { TourdulichService } from '../service/tourdulich.service';
   styleUrls: ['./chitiettour.component.css']
 })
 export class ChitiettourComponent implements OnInit {
-  tour :any;
+  tour_dt: any;
   selectedTour: any;
-  constructor( private _activatedRoute: ActivatedRoute) { }
+  errorMsg: string = "";
+  show_tour: boolean = true;
+  constructor(private _service: TourdulichService,  private _activatedRoute: ActivatedRoute) { }
+
 
   ngOnInit(): void {
     this._activatedRoute.paramMap.subscribe(
       (param)=>{
-        
         let ma_tour = param.get('ma_tour');
         if (ma_tour !=null){
           this.selectedTour = ma_tour;
         }
       }
     )  
+    this._service.getDataTour().subscribe(
+      {
+        next: (data) => this.tour_dt = data,
+        error: (err) => this.errorMsg = err.message
+      })
 
+      // if(this.selectedTour === this.tour_dt.ma_tour){
+      //   this.show_tour = true;
+      // }else{
+      //   this.show_tour = false;
+      // }
   }
-    
-
+  check( a:string ){
+    if(this.selectedTour === a){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }
