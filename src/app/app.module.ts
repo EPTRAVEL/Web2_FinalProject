@@ -17,7 +17,8 @@ import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 import { TourdulichComponent } from './tourdulich/tourdulich.component';
 import { CommonModule } from '@angular/common';
 
-import { ChitiettourComponent } from './chitiettour/chitiettour.component'; 
+import { ChitiettourComponent } from './chitiettour/chitiettour.component';
+import { YeuthichComponent } from './yeuthich/yeuthich.component'; 
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ChitiettourComponent } from './chitiettour/chitiettour.component';
     ThanhtoanComponent,
     TourdulichComponent,
     ChitiettourComponent,
+    YeuthichComponent,
   ],
   imports: [
     BrowserModule,
