@@ -1,19 +1,36 @@
-<div class="container-fluid" style="background-image: url(./assets/images/main_background_den.png);">
-    <div class="row">
-        <div class="col-lg-4 col-sm-4 col-xs-6 bg-info">
-          <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Link 1</a></li>
-              <li><a class="dropdown-item" href="#">Link 2</a></li>
-              <li><a class="dropdown-item" href="#">Link 3</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-8 col-sm-8 col-xs-6 bg-danger">
-            
-        </div>
+<div class="container-fluid " >
+  <div class="row row-style mx-auto ">
+    <div class="col-lg-4 col-sm-4 col-xs-6 text-center">
+      <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle bg-light border" data-bs-toggle="dropdown" style="width: 90%">
+          Sắp xếp theo
+        </button>
+        <ul class="dropdown-menu text-center" style="width: 90%">
+          <li><a class="dropdown-item" href="#">Giá từ thấp đến cao</a></li>
+          <li><a class="dropdown-item" href="#">Giá từ cao đến thấp</a></li>
+          <li><a class="dropdown-item" href="#">Giảm giá nhiều nhất</a></li>
+        </ul>
+      </div>
     </div>
+    <!-- <div class="col-lg-4 col-sm-4 col-xs-6 bg-info text-center">
+          <select class="form-select text-center">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div> -->
+    <div class="col-lg-8 col-sm-8 col-xs-6 ">
+      <div class="input-group mx-auto" style="width: 90%">
+        <button class="btn btn-light border border-end-0" type="search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+        <input type="text" class="form-control bg-light " placeholder="Tìm kiếm theo tên tour">
+      </div>
+    </div>
+  </div>
 </div>
