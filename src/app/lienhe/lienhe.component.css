@@ -85,21 +85,8 @@
     color: rgb(231, 231, 231);
     border-radius: 10px;
 }
-/* Intro */
 .intro{
-    min-width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    text-align: center;
 }
-.intro img {
-    width: 350px;
-}
-.intro h2{
-    font-family: Fester_Bold; 
-    font-size: 32px;
-    margin-top: 20px;
-    color: #0C4A6D;
-}
-.intro p {
-    font-size: 17px;
-    font-family: sans-serif;
-}
+

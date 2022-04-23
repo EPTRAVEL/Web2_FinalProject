@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-image: url(./assets/images/main_background_den.png);">
+<div class="container-fluid">
     <div class="container">
         <div class="tittle text-center">Đội ngũ Admin</div>
         <div class="row mx-0 justify-content-around">
@@ -33,6 +33,7 @@
                 <p>K194060875</p>
             </div>
         </div>
+
         <div class="tittle text-center">Liên hệ với chúng tôi</div>
         <div class="form_style">
             <form action="">
@@ -73,55 +74,65 @@
                 </div>
             </form>
         </div>
-        <div class="tittle text-center">Về chúng tôi
-        </div>
+        <div class="tittle text-center">Về chúng tôi </div>
 
-        <!-- Intro -->
-        <div class="offcanvas offcanvas-start intro" id="demo">
-            <div class="offcanvas-header">
-                <h1 class="offcanvas-title text-center">Về chúng tôi</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="d-flex justify-content-center mb-3">
-                    <div class="p-2">
-                        <h2>Tầm nhìn</h2>
-                        <p>Trở thành top những doanh nghiệp về du lịch có chất lượng dịch vụ tốt nhất tại Việt Nam
-                        </p>
-                        <p>Nằm trong top 5 công ty lữ hành uy tính tại Việt Nam</p>
-                    </div>
-                    <div class="p-2">
-                        <img src="./assets/images/IMAGE/Vision.jpg" class="rounded-circle" alt="Vision">
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <div class="p-2">
-                        <img src="./assets/images/IMAGE/Mission.jpg" class="rounded-circle" alt="Mission">
-                    </div>
-                    <div class="p-2">
-                        <h2>Sứ mệnh</h2>
-                        <p>Mang đến cho khách hàng sự trải nghiệm du lịch mới mẽ với giá cả phải chăng</p>
-                        <p>Nâng tầm du lịch Việt Nam ra quốc tế</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <div class="p-2">
-                        <h2>Giá trị cốt lõi</h2>
-                        <p>Sự hài lòng của khách hàng là mục tiêu trung tâm của doanh nghiệp</p>
-                        <p>Thái độ hơn trình độ</p>
-                        <p>Đổi mới không ngừng</p>
-                    </div>
-                    <div class="p-2">
-                        <img src="./assets/images/IMAGE/CoreValue.jpg" class="rounded-circle" alt="CoreValue">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-        <div class="container-fluid mt-3">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                Open
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner intro ">
+                <div class="carousel-item active ">
+                    <div class="row text-center mx-auto " style="width: 80%">
+                        <div class="col-lg-6 col-sm-6 col-xs-6  ">
+                            <h2>Tầm nhìn</h2>
+                            <p>Trở thành top những doanh nghiệp về du lịch có chất lượng dịch vụ tốt nhất tại Việt Nam <br> Nằm trong top 5 công ty lữ hành uy tính tại Việt Nam</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-6  ">
+                            <img src="./assets/images/IMAGE/Vision.jpg" alt="Vision" class="img-thumbnail"
+                                width="300px">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row text-center mx-auto " style="width: 80%">
+                        <div class="col-lg-6 col-sm-6 col-xs-6  ">
+                            <h2>Sứ mệnh</h2>
+                            <p>Mang đến cho khách hàng sự trải nghiệm du lịch mới mẽ với giá cả phải chăng <br> Nâng tầm du lịch Việt Nam ra quốc tế</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-6  ">
+                            <img src="./assets/images/IMAGE/Mission.jpg" alt="Mission" class="img-thumbnail"
+                                width="300px">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row text-center mx-auto " style="width: 80%">
+                        <div class="col-lg-6 col-sm-6 col-xs-6  ">
+                            <h2>Giá trị cốt lõi</h2>
+                            <p>Sự hài lòng của khách hàng là mục tiêu trung tâm của doanh nghiệp <br> Thái độ hơn trình độ <br> Đổi mới không ngừng</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-6 ">
+                            <img src="./assets/images/IMAGE/CoreValue.jpg" alt="CoreValue" class="img-thumbnail "
+                                width="300px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
+
     </div>
 </div>
