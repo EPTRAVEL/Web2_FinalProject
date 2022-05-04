@@ -1,0 +1,108 @@
+.container{
+    position: relative;
+}
+.thongtin-content{
+    width: 1000px;
+    height: 700px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    
+}
+#thanhtoan-tieude {
+    text-align: center;
+    font-family: Fester_Bold;
+}
+
+.text-divider {
+    display: flex;
+    align-items: center;
+    --text-divider-gap: 10px;
+    margin-top: -16px;
+}
+
+.text-divider::before,
+.text-divider::after {
+    content: '';
+    height: 1px;
+    background-color: #333;
+    flex-grow: 1;
+}
+
+.text-divider::before {
+    width: 10px;
+}
+
+.text-divider::after {
+    width: 500px;
+}
+
+.text-divider::before {
+    margin-right: var(--text-divider-gap);
+}
+
+.text-divider::after {
+    margin-left: var(--text-divider-gap);
+}
+.border-hanhkhach{
+    position: absolute;
+    top: 250px;
+    width: 950px;
+    padding: 0px;
+}
+.button-datngay{
+    position: absolute;
+    top: 780px;
+    left: 570px;
+}
+.hanhkhanh{
+    padding: 10px;
+    padding-left: 80px;
+}
+.tongcong{
+    margin-left: 80px;
+}
+.pttt{
+    margin-left: 80px;
+}
+.input-themma {
+    width: 100px;
+    height: 35px;
+}
+.btn-apdung {
+    background-color: #5DA9DD;
+    color: white;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-left: 5px;
+}
+.chonphuongthuc {
+    background-color: #5DA9DD;
+    height: 30px;
+    border-radius: 5px;
+}
+.btn-datngay{
+    background-color: #D74848;
+    color: white;
+    font-family: Fester_Bold;
+    width: 150px; 
+     height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin: 20px auto;
+}
+
+   
+
