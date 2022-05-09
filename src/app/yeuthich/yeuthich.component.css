@@ -5,3 +5,22 @@
     text-align: center;
     margin-top: 10px;
 }
+.tour-content{
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    padding: 10px;
+}
+.tour_info{
+    text-align: left;
+    width: 60%;
+}
+.tour_button{
+    text-align: right;
+    width: 40%;
+    position: relative;
+}
+.function_button{
+    position: absolute;
+    bottom: 5px;
+    width: 90%;
+}
