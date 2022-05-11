@@ -1,14 +1,15 @@
-.container{
+.container {
     position: relative;
 }
-.thongtin-content{
+
+.thongtin-content {
     width: 1000px;
     height: 700px;
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
-    
 }
+
 #thanhtoan-tieude {
     text-align: center;
     font-family: Fester_Bold;
@@ -44,31 +45,39 @@
 .text-divider::after {
     margin-left: var(--text-divider-gap);
 }
-.border-hanhkhach{
+
+.border-hanhkhach {
     position: absolute;
     top: 250px;
     width: 950px;
     padding: 0px;
 }
-.button-datngay{
+
+
+/* .button-datngay {
     position: absolute;
     top: 780px;
-    left: 570px;
-}
-.hanhkhanh{
+    left: 45%;
+} */
+
+.hanhkhanh {
     padding: 10px;
     padding-left: 80px;
 }
-.tongcong{
+
+.tongcong {
     margin-left: 80px;
 }
-.pttt{
+
+.pttt {
     margin-left: 80px;
 }
+
 .input-themma {
     width: 100px;
     height: 35px;
 }
+
 .btn-apdung {
     background-color: #5DA9DD;
     color: white;
@@ -83,17 +92,21 @@
     border-bottom: 1px solid grey;
     margin-left: 5px;
 }
+
 .chonphuongthuc {
     background-color: #5DA9DD;
     height: 30px;
     border-radius: 5px;
 }
-.btn-datngay{
+
+
+/* 
+.btn-datngay {
     background-color: #D74848;
     color: white;
     font-family: Fester_Bold;
-    width: 150px; 
-     height: 40px;
+    width: 150px;
+    height: 40px;
     text-align: center;
     line-height: 40px;
     font-size: 18px;
@@ -102,7 +115,8 @@
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
     margin: 20px auto;
-}
+} */
 
-   
+@media screen and (max-width:700px) {}
 
+@media only screen and (max-width:480px) {}
