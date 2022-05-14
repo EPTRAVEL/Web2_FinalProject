@@ -36,8 +36,8 @@
                     <label for="gioitinh">Giới tính <span class="redstar">*</span></label>
                     <!-- <input type="text" id="gioitinh"> -->
                     <span class="gt">
-                        <input type="radio" name="gtinh" id="nam"><span class="gtinh"><span>Nam</span></span>
-                        <input type="radio" name="gtinh" id="nu"><span class="gtinh">Nữ</span>
+                        <input value="nam" formControlName="gioiTinh" type="radio" name="gioiTinh" id="nam"><span class="gioiTinh"><span>Nam</span></span>
+                        <input value="nu" formControlName="gioiTinh" type="radio" name="gioiTinh" id="nu"><span class="gioiTinh">Nữ</span>
                     </span>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                 <div class="form-row--right">
                     <label for="ngaycap">Ngày cấp</label>
                     <div>
-                        <input type="date" id="ngaycap">
+                        <input type="date" id="ngaycap" formControlName="ngayCap" >
                     </div>
                 </div>
             </div>

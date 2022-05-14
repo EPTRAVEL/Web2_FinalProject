@@ -10,13 +10,27 @@ export class HeaderComponent implements OnInit {
   btnHeart: string = 'bi-heart';
   btnPerson: string = 'bi-person';
   hidden: string = 'hidden';
-  hidden_dm: string='hidden_dm'
-
+  search_focus: string = 'search_black';
+  box_show: string = 'hidden';
+  cap1: string = "";
+  trongnuoc_b: string = "";
+  ngoainuoc_b: string = "";
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  changeSearch(){
+    if(this.search_focus=='search_black')
+    {
+      this.search_focus = 'search_white';
+      this.box_show='show'
+    }
+    else{
+      this.search_focus='search_black'
+      this.box_show='hidden'
+    }
+    // this.search_focus == 'search_black' ? 'search_white' : 'search_black'
+  }
   changeHeart(){
     if(this.btnHeart=='bi-heart')
     {
@@ -45,12 +59,28 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  changeHidden_dm(){
-    if(this.hidden_dm=='hidden_dm'){
-      this.hidden_dm = 'hidden'
-    }
+  hienCap1(){
+    this.cap1 = "hienI"
   }
-  changeDefault(){
-    this.hidden_dm = 'hidden_dm'
+  anCap1(){
+    this.cap1 = ""
   }
+
+  hienTN(){
+    this.trongnuoc_b = "hienTN"
+  }
+  anTN(){
+    this.trongnuoc_b = ""
+  }
+  hienNN(){
+          this.ngoainuoc_b = "hienNN"  
+  }
+  anNN(){
+    this.ngoainuoc_b = ""
+  }
+
+
+
+  // search
+  
 }

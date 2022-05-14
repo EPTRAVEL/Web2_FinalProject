@@ -1,7 +1,7 @@
 export class User_reg {
   constructor(
     public hoTen: string,
-    public gTinh: string,
+    public gioiTinh: string,
     public ngaySinh: string,
     public diDong: string,
     public cMND: string,

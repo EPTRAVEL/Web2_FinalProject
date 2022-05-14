@@ -11,6 +11,7 @@ import { TrangchuComponent } from './trangchu/trangchu.component';
 import { TourdulichComponent } from './tourdulich/tourdulich.component';
 import { LienheComponent } from './lienhe/lienhe.component';
 import { ChitiettourComponent } from './chitiettour/chitiettour.component';
+import { YeuthichComponent } from './yeuthich/yeuthich.component';
 const routes: Routes = [
   {
     path: '',
@@ -58,8 +59,16 @@ const routes: Routes = [
     component: LienheComponent,
   },
   {
-    path: 'tourdulich/:ma_tour',
+    path: 'yeuthich',
+    component: YeuthichComponent,
+  },
+  {
+    path: 'tourdulich/:quocgia/:ma_tour',
     component: ChitiettourComponent,
+  },
+  {
+    path: 'tourdulich/:quocgia',
+    component: TourdulichComponent,
   },
 ];
 

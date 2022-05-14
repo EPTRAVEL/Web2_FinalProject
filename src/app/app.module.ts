@@ -16,7 +16,7 @@ import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component'
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
 import { TourdulichComponent } from './tourdulich/tourdulich.component';
 import { CommonModule } from '@angular/common';
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 import { YeuthichComponent } from './yeuthich/yeuthich.component'; 
 
@@ -43,7 +43,8 @@ import { YeuthichComponent } from './yeuthich/yeuthich.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
