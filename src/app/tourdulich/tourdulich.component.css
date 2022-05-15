@@ -3,6 +3,9 @@
     background-color: rgba(85, 85, 85,0.5);
     color: white;
 }
+.card-img-top{
+    height: 300px;
+}
 .sapxep-select{
     align-items: right;
     width: 200px;
@@ -40,10 +43,45 @@ a{
 }
 .category{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .card-tour:hover{
     transform: scale(1.05);
     box-shadow: 2px 2px 4px 2px #888888;
 }
-
+.p-sticky{
+    position: -webkit-sticky;
+    position: sticky;
+  top: 140px;
+}
+@media screen and (max-width:1980px){
+    .card-tour{
+        width: 300px;
+        min-width: 250px;
+        
+    }
+}
+@media screen and (max-width:1616px){
+    .card-tour{
+        width: 400px;
+        min-width: 250px;
+        
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:1427px){
+    .card-tour{
+        width: 80%;
+        min-width: 300px;
+        
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:990px){
+    .card-tour{
+        width: 90%;
+        min-width: 250px;
+        
+    }
+}

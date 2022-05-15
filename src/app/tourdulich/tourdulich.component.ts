@@ -10,6 +10,7 @@ export class TourdulichComponent implements OnInit {
   tour: any;
   errorMsg: string = "";
   selectedTour: any;
+  value:string[] =[];
   constructor(private _service: TourdulichService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -26,10 +27,11 @@ export class TourdulichComponent implements OnInit {
         }
       })
 
-    }
-    onSelect(data: any):void{
-      // console.log(data)
-      
-      this._router.navigate(['/tourdulich', data.ma_tour])
-    }
   }
+
+  onSelect(data: any): void {
+    // console.log(data)
+
+    this._router.navigate(['/tourdulich', data.ma_tour])
+  }
+}

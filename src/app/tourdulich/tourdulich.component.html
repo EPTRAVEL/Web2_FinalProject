@@ -6,8 +6,8 @@
     </div>
     <div class="row">
         <div class="col-10"></div>
-        <div class="sapxep-select col-2">
-            <select name="Sắp xếp" class="form-select mb-3">
+        <div class="sapxep-select col-2 ">
+            <select name="Sắp xếp" class="form-select mb-3 ">
                 <option value="sapxep">--Sắp xếp theo--</option>
                 <option value="thap-cao">Theo giá thấp đến cao</option>
                 <option value="thap-cao">Theo giá cao đến thấp</option>
@@ -16,8 +16,8 @@
         </div>
     </div>
     <div class="row m-30">
-        <div class="col-md-3">
-            <div class="locsanpham-select">
+        <div class="col-lg-3 sticky-lg-top col-md-12 ">
+            <div class="locsanpham-select p-sticky">
                 <h4 class="text-center p-2">LỌC KẾT QUẢ</h4>
                 <div>
                     <select name="quocgia" id="quocgia" class="form-select select-item">
@@ -69,12 +69,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <div class="col-lg-9 col-md-12 text-center">
             <div class="category">
                     <div class="card m-2 card-tour"
-                        *ngFor="let datatour of tour" (click)="onSelect(datatour)" style="width:300px;">
-                        <img class="card-img-top img-thumnail" style="height: 200px" src="{{datatour.images[0]}}"
+                        *ngFor="let datatour of tour" (click)="onSelect(datatour)">
+                        <div class="card-img-top">
+                            <img class="img-thumnail" style="height: 100%; width: 100%;" src="{{datatour.images[0]}}"
                             alt="error">
+                        </div>
                         <div class="card-body text-center">
                             <h5 class="card-title m-2">{{datatour.ten_tour}}</h5>
                             <p class="tour-item__code"> Mã Tour: {{ datatour.ma_tour }}</p>
@@ -82,7 +84,7 @@
                                 <span> {{ datatour.noikhoihanh }} </span>
                             </p>
                             <div class="tour-item__price--current__number">Giá
-                                <span id="tour-item__price--current__number">{{ datatour.giatiennguoilon}}đ</span>/Khách
+                                <span id="tour-item__price--current__number">{{ datatour.giatiennguoilon | number }}đ</span>/Khách
                             </div>
                             <div class="tour-item__price--current">
                                 <button class="btn btn-danger  btn-book">
