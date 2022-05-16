@@ -62,3 +62,111 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
+.khuyenmai_sp{
+  background-color:rgb(255, 255, 255, 0.4); ;
+  width: 390px;
+  height:560px;
+  position: relative;   
+  display: flex;
+  flex-direction: column;
+}
+.khuyenmai_sp--content{
+  width: 100%;
+  margin-top: 10px;
+ margin-left: 5px;
+
+}
+.khuyenmai_text{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+height: 80px;
+line-height: 30px;
+  text-align: center;
+  font-family: Fester_Bold;
+  margin: auto 5px;
+}
+.khuyenmai_gia{
+  font-family: Fester_Bold;
+  font-size: 23px;
+  margin: 5px 10%;
+  color: #F40000;
+  font-family: Fester_Bold;
+}
+.khuyenmai_giacu{
+  font-family: Fester_Bold;
+  font-size: 20px;
+  margin: 0px 10%;
+  color: #868686;
+  text-decoration:line-through;
+
+}
+.khuyenmai_imagecard{
+  width:28px;
+  margin-right:3px ;
+  
+}
+.khuyenmai_imagecard{
+  width: 20px;
+  height: 30px;
+  border: 0px;
+  background-color: #D74848;
+  background-image: url("src/assets/images/ICON/cart.png");
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 5px;
+  background-size: 30px;
+  background-position: 5px 0px;
+  background-repeat: no-repeat;
+  padding: 12px 0 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  font-family: Fester_Bold;
+    font-size: 0; 
+    
+  
+}
+.khuyenmai_percent{ 
+  position: absolute;
+  right: 50px;
+  bottom: 10%;
+}
+.khuyenmai_percent--tag{
+  width: 50px;
+}
+.khuyenmai_percent--text{
+  position: absolute;
+  right: 3px;
+  bottom: 20%;
+  font-family: Fester_Bold;
+  font-size: 20px; 
+  color: #ffffff;
+}
+
+  .khuyenmai_imagecard:hover{
+      width: 110px;
+      background-color: #D74848;
+      
+      color: white;
+      cursor: pointer;  
+      font-size: 15px; 
+      margin-top: 20px;
+      line-height: 12px;
+  }
+.phuongtien_item1{
+  width: 20px;
+  position: absolute;
+  right:30px; 
+  top: 70%;
+  opacity: 0.6;
+}
+.phuongtien_item2{
+  width: 20px;
+  position: absolute;
+ right: 5px; 
+ top: 70%;
+  opacity: 0.6;
+}
+
