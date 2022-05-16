@@ -35,7 +35,7 @@ const routes: Routes = [
     component: KhuyenmaiComponent,
   },
   {
-    path: 'noidungtintuc',
+    path: 'noidungtintuc/:tintuc_id',
     component: NoidungtintucComponent,
   },
   {

@@ -13,7 +13,7 @@ export class TintucComponent implements OnInit {
   errMessage:string='';
   selectedId:any;
   message:string="";
-  
+  hidden: string ="hidden"
 
   constructor(private _service:TintucService,private router:Router,private activatedRoute:ActivatedRoute) { }
 
@@ -32,11 +32,12 @@ export class TintucComponent implements OnInit {
   }
 
     onSelect(data:any):void{
-      this.router.navigate(['/tintuc'],data.tintuc_id);
+      this.router.navigate(['/noidungtintuc'],data.tintuc_id);
     }
     
     isSelected(t:any):boolean{
       return t.tintuc_id===this.selectedId
     }
+    
     
 }

@@ -6,9 +6,10 @@
         <div class="noidungtintuc-container">
             <div class="noidungtintuc-container-left">
                 <div style="margin: 30px">
-                    <div id="Load_Content">
-                        <h4>You selected #{{selectedId}}</h4>
-                        <button (click)="goBack()">Back</button>
+                    <div id="Load_Content" *ngFor="let t of tintuc" [class.d-none]="t.tintuc_id==selectedId?false:true">
+                        <div> {{t.content}}</div>
+                        <br>
+                        <hr>
                     </div>
                 </div>
             </div>

@@ -52,14 +52,14 @@
         <div class="tintuc-box {{isSelected(t)? 'selected':''}}" *ngFor="let t of tintuc" (click)="onSelect(t)">
             <div class="tintuc-box-item__left">
                 <div>
-                    <a routerLink="/tintuc" routerLinkActive="active">
+                    <a routerLink="/noidungtintuc/{{t.tintuc_id}}" routerLinkActive="active">
                         <img class="tintuc-bottom-img" src="{{t.main_img}}">
                     </a>
                 </div>
             </div>
             <div class="tintuc-box-item__right">
                 <div>
-                    <a routerLink="/tintuc" routerLinkActive="active" class="tintuc-font-big-header">{{t.header}}</a>
+                    <a routerLink="/noidungtintuc/{{t.tintuc_id}}" routerLinkActive="active" class="tintuc-font-big-header">{{t.header}}</a>
                     <p>{{t.news_intro}}</p>
                 </div>
             </div>
