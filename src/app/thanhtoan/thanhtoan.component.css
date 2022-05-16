@@ -1,10 +1,6 @@
-.container {
-    position: relative;
-}
-
 .thongtin-content {
-    width: 1000px;
-    height: 700px;
+    width: 80%;
+    height: 50%;
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -18,8 +14,9 @@
 .text-divider {
     display: flex;
     align-items: center;
-    --text-divider-gap: 10px;
-    margin-top: -16px;
+    --text-divider-gap: 1rem;
+    width: 1017px;
+    margin-left: 30px;
 }
 
 .text-divider::before,
@@ -31,11 +28,11 @@
 }
 
 .text-divider::before {
-    width: 10px;
+    width: 1%;
 }
 
 .text-divider::after {
-    width: 500px;
+    width: 50%;
 }
 
 .text-divider::before {
@@ -47,22 +44,17 @@
 }
 
 .border-hanhkhach {
-    position: absolute;
-    top: 250px;
-    width: 950px;
-    padding: 0px;
+    border: 1px solid black;
+    border-top: none;
+    margin-top: -40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
 }
-
-
-/* .button-datngay {
-    position: absolute;
-    top: 780px;
-    left: 45%;
-} */
 
 .hanhkhanh {
     padding: 10px;
-    padding-left: 80px;
+    padding-left: 10%;
 }
 
 .tongcong {
@@ -81,11 +73,9 @@
 .btn-apdung {
     background-color: #5DA9DD;
     color: white;
-    width: 100px;
     height: 35px;
     text-align: center;
-    line-height: 25px;
-    font-size: 17px;
+    font-size: 13px;
     border-radius: 5px;
     border: none;
     border-right: 1px solid grey;
@@ -99,13 +89,10 @@
     border-radius: 5px;
 }
 
-
-/* 
 .btn-datngay {
     background-color: #D74848;
     color: white;
     font-family: Fester_Bold;
-    width: 150px;
     height: 40px;
     text-align: center;
     line-height: 40px;
@@ -115,7 +102,7 @@
     border-right: 1px solid grey;
     border-bottom: 1px solid grey;
     margin: 20px auto;
-} */
+}
 
 @media screen and (max-width:700px) {}
 
