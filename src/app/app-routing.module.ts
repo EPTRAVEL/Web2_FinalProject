@@ -46,6 +46,7 @@ const routes: Routes = [
     path: 'tintuc',
     component: TintucComponent,
   },
+  
   {
     path: 'trangchu',
     component: TrangchuComponent,

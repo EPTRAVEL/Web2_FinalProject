@@ -1,1 +1,41 @@
-<p>noidungtintuc works!</p>
+<div class="container-fluid">
+    <div class="noidungtintuc-content">
+        <div class="row">
+            <span class="badge">TIN TỨC DU LỊCH</span>
+        </div>
+        <div class="noidungtintuc-container">
+            <div class="noidungtintuc-container-left">
+                <div style="margin: 30px">
+                    <div id="Load_Content">
+                        <h4>You selected #{{selectedId}}</h4>
+                        <button (click)="goBack()">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="noidungtintuc-container-right">
+                <div class="noidungtintuc-container-right-tintucmoi">
+                    <div style="margin:20px;text-align: center;">
+                        <h2>TIN TỨC MỚI</h2>
+                    </div>
+                    <div>
+                        <ul class="noidungtintuc-ul" id="tintucmoi">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="noidungtintuc-container-right-tintucphobien">
+                    <div style="margin:20px;text-align: center;">
+                        <h2>TIN TỨC PHỔ BIẾN</h2>
+                    </div>
+                    <div>
+                        <ul class="noidungtintuc-ul" id="tintucphobien">
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

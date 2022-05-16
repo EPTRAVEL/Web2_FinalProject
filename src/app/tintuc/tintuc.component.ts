@@ -1,3 +1,5 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { TintucService } from './../service/tintuc.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TintucComponent implements OnInit {
 
-  constructor() { }
+  tintuc:any[]=[];
+  errMessage:string='';
+  selectedId:any;
+  message:string="";
+  
+
+  constructor(private _service:TintucService,private router:Router,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this._service.getDataTinTuc().subscribe({
+      next:(data)=>{this.tintuc=data},
+      error:(err)=>{this.errMessage=err}
+    })
+
+    this.activatedRoute.paramMap.subscribe((param)=>{
+      let tintuc_id=param.get('tintuc_id');
+      if(tintuc_id!=null)
+          this.selectedId=parseInt(tintuc_id);
+    });
   }
 
+    onSelect(data:any):void{
+      this.router.navigate(['/tintuc'],data.tintuc_id);
+    }
+    
+    isSelected(t:any):boolean{
+      return t.tintuc_id===this.selectedId
+    }
+    
 }
