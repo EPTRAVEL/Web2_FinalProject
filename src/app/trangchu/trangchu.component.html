@@ -41,8 +41,8 @@
                 (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
                 (beforeChange)="beforeChange($event)">
 
-                <div ngxSlickItem *ngFor="let slide of slides" class="ms-4 me-4 slider-three slider-three-item">
-                    <img src="{{ slide.img }}" alt="" width="100%">
+                <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
+                    <img src="{{t.images[2]}}" alt="" width="100%">
                 </div>
             </ngx-slick-carousel>
 
@@ -202,8 +202,8 @@
             (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
             (beforeChange)="beforeChange($event)">
 
-            <div ngxSlickItem *ngFor="let slide of slides" class="ms-4 me-4 slider-three">
-                <img src="{{ slide.img }}" alt="" width="100%">
+            <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three">
+                <img src="{{t.images[3]}}}" alt="" width="100%">
                 <p class="text-center">Trung Quốc - Bắc Kinh - Thượng Hải - Hàng Châu - Tô Châu</p>
             </div>
         </ngx-slick-carousel>

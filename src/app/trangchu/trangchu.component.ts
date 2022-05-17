@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TourdulichService } from '../service/tourdulich.service';
 
 @Component({
   selector: 'app-trangchu',
@@ -6,30 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trangchu.component.css'],
 })
 export class TrangchuComponent implements OnInit {
-  slides = [
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
-    { img: './assets/images/IMAGE/img_temp_500x350.png' },
- 
-  ];
+  tour: any;
+  errorMsg: string = "";
+  // slides = [
+  //   { img: './assets/images/IMAGE/img_temp_500x350.png' },
+  //   { img: './assets/images/IMAGE/img_temp_500x350.png' },
+  //   { img: './assets/images/IMAGE/img_temp_500x350.png' },
+  // ];
   slideConfig = {
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -76,7 +60,13 @@ export class TrangchuComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  constructor() {}
+  constructor(private _service: TourdulichService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._service.getDataTour().subscribe(
+      {
+        next: (data) => this.tour = data,
+        error: (err) => this.errorMsg = err.message
+      })
+  }
 }
