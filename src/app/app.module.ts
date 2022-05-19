@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule, RouterComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DangKyComponent } from './dang-ky/dang-ky.component';
@@ -44,7 +46,9 @@ import { YeuthichComponent } from './yeuthich/yeuthich.component';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
