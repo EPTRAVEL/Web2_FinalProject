@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import { KhuyenmaiComponent } from './khuyenmai/khuyenmai.component';
-import { CactourkhuyenmaiComponent } from './cactourkhuyenmai/cactourkhuyenmai.component';
+
 import { TintucComponent } from './tintuc/tintuc.component';
 import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component';
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
@@ -31,7 +31,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FooterComponent,
     TrangchuComponent,
     KhuyenmaiComponent,
-    CactourkhuyenmaiComponent,
+
     TintucComponent,
     NoidungtintucComponent,
     ThanhtoanComponent,

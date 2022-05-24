@@ -2,7 +2,7 @@ import { ThongtinComponent } from './thongtin/thongtin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DangKyComponent } from './dang-ky/dang-ky.component';
-import { CactourkhuyenmaiComponent } from './cactourkhuyenmai/cactourkhuyenmai.component';
+
 import { KhuyenmaiComponent } from './khuyenmai/khuyenmai.component';
 import { NoidungtintucComponent } from './noidungtintuc/noidungtintuc.component';
 import { ThanhtoanComponent } from './thanhtoan/thanhtoan.component';
@@ -25,10 +25,6 @@ const routes: Routes = [
   {
     path: 'thongtin',
     component: ThongtinComponent,
-  },
-  {
-    path: 'cactourkhuyenmai',
-    component: CactourkhuyenmaiComponent,
   },
   {
     path: 'khuyenmai',
