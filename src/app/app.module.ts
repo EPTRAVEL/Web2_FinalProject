@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule, RouterComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DangKyComponent } from './dang-ky/dang-ky.component';
@@ -19,7 +21,7 @@ import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 import { YeuthichComponent } from './yeuthich/yeuthich.component'; 
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,10 @@ import { YeuthichComponent } from './yeuthich/yeuthich.component';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

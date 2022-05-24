@@ -3,7 +3,7 @@
         <div class="row">
             <span class="badge">TIN TỨC DU LỊCH</span>
         </div>
-        <div class="tintuc-main-box">
+        <!-- <div class="tintuc-main-box">
             <div class="tintuc-main-box__left" *ngFor="let t of tintuc;first as isFirst">
                 <div *ngIf="isFirst">
                     <a><img class="tintuc-left-img" src="{{t.main_img}}" alt="Error" style="z-index: 1;"></a>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <div class="tintuc-box {{isSelected(t)? 'selected':''}}" *ngFor="let t of tintuc" (click)="onSelect(t)">
             <div class="tintuc-box-item__left">
                 <div>

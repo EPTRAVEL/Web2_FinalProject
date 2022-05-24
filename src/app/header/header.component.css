@@ -14,7 +14,7 @@
   display: block;
 }
 .navbar {
-  margin-top: 70px;
+  margin-top: 55px;
   background-color: rgba(0, 0, 0, 0.2) !important;
   border-radius: 10px;
   height: 35px
@@ -240,7 +240,7 @@ a:hover{
 
 }
 .search-bar-body{
-  margin-top:20px
+  /* margin-top:20px */
 }
 .search-bar-item{
   background-color: rgba(255, 255, 255, 0.5);
@@ -285,4 +285,20 @@ a:hover{
   border-radius: 5px;
   z-index: 20;
   box-shadow: 0px 1px 20px rgba(39, 39, 39,0.6);
+}
+#myInput {
+  font-family: Montserrat;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+tbody tr:hover{
+  background-color: rgba(129, 156, 255, 0.2);
+  cursor: pointer;
+  transform: scale(1.02);
+  color:rgba(129, 156, 255, 1)
 }

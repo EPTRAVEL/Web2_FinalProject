@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TourdulichService } from '../service/tourdulich.service';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  tour: any;
+  errorMsg: string = "";
+  selectedTour: any;
+  searchText: string = "";
 
   btnHeart: string = 'bi-heart';
   btnPerson: string = 'bi-person';
@@ -15,9 +21,14 @@ export class HeaderComponent implements OnInit {
   cap1: string = "";
   trongnuoc_b: string = "";
   ngoainuoc_b: string = "";
-  constructor() { }
+  constructor(private _service: TourdulichService) { }
 
   ngOnInit(): void {
+    this._service.getDataTour().subscribe(
+      {
+        next: (data) => this.tour = data,
+        error: (err) => this.errorMsg = err.message
+      })
   }
   changeSearch(){
     if(this.search_focus=='search_black')

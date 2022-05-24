@@ -12,7 +12,7 @@
             khách hàng</p>
 
 
-        <form [formGroup]="regForm">
+        <form [formGroup]="regForm" (ngSubmit)="onSubmit(regForm.value)">
             <div class="form-row">
                 <div class="form-row--left">
                     <label for="hoten">Họ tên <span class="redstar">*</span></label>
@@ -36,8 +36,10 @@
                     <label for="gioitinh">Giới tính <span class="redstar">*</span></label>
                     <!-- <input type="text" id="gioitinh"> -->
                     <span class="gt">
-                        <input value="nam" formControlName="gioiTinh" type="radio" name="gioiTinh" id="nam"><span class="gioiTinh"><span>Nam</span></span>
-                        <input value="nu" formControlName="gioiTinh" type="radio" name="gioiTinh" id="nu"><span class="gioiTinh">Nữ</span>
+                        <input value="nam" formControlName="gioiTinh" type="radio" name="gioiTinh" id="nam"><span
+                            class="gioiTinh"><span>Nam</span></span>
+                        <input value="nu" formControlName="gioiTinh" type="radio" name="gioiTinh" id="nu"><span
+                            class="gioiTinh">Nữ</span>
                     </span>
                 </div>
             </div>
@@ -46,7 +48,7 @@
                     <label for="ngaysinh">Ngày sinh<span class="redstar">*</span></label>
                     <div>
                         <input type="date" id="ngaysinh" formControlName="ngaySinh"
-                        [class.is-invalid]="regForm.controls['ngaySinh'].invalid&&regForm.controls['ngaySinh'].touched">
+                            [class.is-invalid]="regForm.controls['ngaySinh'].invalid&&regForm.controls['ngaySinh'].touched">
                     </div>
                 </div>
                 <div class="form-row--right">
@@ -84,7 +86,7 @@
                 <div class="form-row--right">
                     <label for="ngaycap">Ngày cấp</label>
                     <div>
-                        <input type="date" id="ngaycap" formControlName="ngayCap" >
+                        <input type="date" id="ngaycap" formControlName="ngayCap">
                     </div>
                 </div>
             </div>
@@ -118,16 +120,16 @@
                     <div>
                         <input type="password" id="pass" placeholder="nhập mật khẩu mới" class="form-control"
                             formControlName="pass"
-                            [class.is-invalid]="regForm.controls['pass'].invalid&&regForm.controls['pass'].touched"
-                           >
+                            [class.is-invalid]="regForm.controls['pass'].invalid&&regForm.controls['pass'].touched">
                     </div>
                 </div>
                 <div class="form-row--right">
                     <label for="nl_matkhau">Nhập lại MK<span class="redstar">*</span></label>
                     <div>
-                        <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu" class="form-control"  [class.is-invalid] = "regForm.errors?.['misMatch']"
-                        formControlName="confirmPass">
-                        <small class="text-danger" *ngIf="regForm.errors?.['misMatch']">Mật khẩu nhập lại không trùng khớp</small>
+                        <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu" class="form-control"
+                            [class.is-invalid]="regForm.errors?.['misMatch']" formControlName="confirmPass">
+                        <small class="text-danger" *ngIf="regForm.errors?.['misMatch']">Mật khẩu nhập lại không trùng
+                            khớp</small>
                     </div>
                 </div>
             </div>
@@ -136,14 +138,15 @@
                     <label for="avatar">Avatar</label>
                     <div>
                         <input type="file" id="avatar" placeholder="choose file" class="form-control"
-                            formControlName="file">
+                            (change)="onChange($event)" formControlName="file">
                     </div>
                 </div>
                 <div class="form-row--right">
-                    
+                    <!-- <img src="./assets/images/logo/logo.png" alt=""> -->
                 </div>
             </div>
-
+            <!-- <p>{{regForm.value|json}}</p> -->
+            <input type="submit" value="Đăng ký" class="btn btn-primary" id="btnDangky">
         </form>
         <div class="line"></div>
         <div class="footer-dangky">
@@ -167,8 +170,7 @@
             <div class="ft-center"></div>
             <div class="ft-right">
 
-                <p>{{regForm.value|json}}</p>
-                <input type="submit" value="Đăng ký" class="btn btn-primary" id="btnDangky">
+
             </div>
         </div>
     </div>

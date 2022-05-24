@@ -10,5 +10,6 @@ export class User_reg {
     public diaChi: string,
     public pass: string,
     public confirmPass: string,
+    public avaImg: File,
   ) {}
 }

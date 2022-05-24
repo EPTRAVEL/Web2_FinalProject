@@ -7,10 +7,17 @@ import { Tour } from '../interface/tour';
   providedIn: 'root'
 })
 export class TourdulichService {
-  url: string = "../assets/data/tour.json"
+  url: string = "http://localhost:8000/Tours"
+  // url: string = "../assets/data/tour.json"
   constructor(private _http: HttpClient) { }
   getDataTour(): Observable<Tour[]> {
     return this._http.get<Tour[]>(this.url)
+      .pipe(
+        retry(2), catchError(this.handleError)
+      )
+  }
+  getDataTourWithCondition(condi: string): Observable<Tour[]> {
+    return this._http.get<Tour[]>(`${this.url}/${condi}`)
       .pipe(
         retry(2), catchError(this.handleError)
       )

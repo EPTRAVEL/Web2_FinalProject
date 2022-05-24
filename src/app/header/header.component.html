@@ -79,55 +79,17 @@
                         <div class="title">Search</div>
                         <div class="search-bar">
                           <div>
-                            <div><input type="text" style="position: relative; border-radius: 15px; border: none; width: 90%; font-family: Montserrat; background-color: rgba(0, 0, 0, 0.03)">
-                                <button class="btn-search" style="color:rgba(0, 0, 0, 0.6);position: absolute; left: 20px; top: 50px; font-family: Montserrat; font-size: 20px">
-                                    <i class="bi bi-search"></i>
-                                </button>
-                                <div style="color:rgba(0, 0, 0, 0.6);position: absolute; left: 60px; top: 55px; font-family: Montserrat; font-size: 16px">
-                                    Tìm kiếm tại đây
-                                </div>
-                            </div>
+                                <input style="background-image: url('../../assets/images/ICON/search.png'); background-size: 20px;" type="text" id="myInput" [(ngModel)]="searchText" onkeyup="myFunction()" placeholder="Tìm tour" title="Type in a name">
+                           
                             <div class="search-bar-body">
-                                <div class="search-bar-item">
-                                    <div>
-                                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="error img" width="150px" style="border-radius: 10px;">
-                                    </div>
-                                    <div style="font-size: 15px; margin-left: 15px;">
-                                        Khoa nè
-                                    </div>
-                                </div>
-                                <div class="search-bar-item">
-                                    <div>
-                                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="error img" width="150px" style="border-radius: 10px;">
-                                    </div>
-                                    <div style="font-size: 15px; margin-left: 15px;">
-                                        Khoa nè
-                                    </div>
-                                </div>
-                                <div class="search-bar-item">
-                                    <div>
-                                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="error img" width="150px" style="border-radius: 10px;">
-                                    </div>
-                                    <div style="font-size: 15px; margin-left: 15px;">
-                                        Khoa nè
-                                    </div>
-                                </div>
-                                <div class="search-bar-item">
-                                    <div>
-                                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="error img" width="150px" style="border-radius: 10px;">
-                                    </div>
-                                    <div style="font-size: 15px; margin-left: 15px;">
-                                        Khoa nè
-                                    </div>
-                                </div>
-                                <div class="search-bar-item">
-                                    <div>
-                                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="error img" width="150px" style="border-radius: 10px;">
-                                    </div>
-                                    <div style="font-size: 15px; margin-left: 15px;">
-                                        Khoa nè
-                                    </div>
-                                </div>
+                                <table class="table">
+                                    <tbody>
+                                      <tr *ngFor="let t of tour | filter: searchText" routerLink="/tourdulich/{{t.ma_tour}}" routerLinkActive="active">
+                                        <td><img style="border-radius: 3px;" src="{{t.images[2]}}" width="150px" alt=""></td>
+                                        <td>{{ t.ten_tour }}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                             </div>
                           </div>
                         </div>

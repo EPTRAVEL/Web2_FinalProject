@@ -42,7 +42,8 @@
                 (beforeChange)="beforeChange($event)">
 
                 <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
-                    <img src="{{t.images[2]}}" alt="" width="100%">
+                    <img src="{{t.images[2]}}" alt="" width="100%" routerLink="/tourdulich/{{t.ma_tour}}"
+                        routerLinkActive="active">
                 </div>
             </ngx-slick-carousel>
 
@@ -132,54 +133,18 @@
         <div class="space">
         </div>
         <div class="ttqt">
-            <p class="text-center position-relative">Tin tức được quan tâm nhiều nhất</p>
-           <div class="ttqt-contentt">
-            <div class="col-12 ttqt-right position-relative">
-                <div><img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                        width="200px"></div>
-                <div>
-                    <p>hihejsdnkasdnnls</p>
-                    <p class="position-absolute">10/10/2001</p>
+            <p class="text-center position-relative">Tour được quan tâm nhiều nhất</p>
+            <div class="ttqt-contentt">
+                <div class="col-12 ttqt-right position-relative" *ngFor="let t of tour">
+                    <div><img src="{{t.images[2]}}" alt="Error" width="200px"></div>
+                    <div>
+                        <p>{{t.ten_tour}}</p>
+                        <p class="position-absolute">{{t.ngaykhoihanh}}</p>
+                    </div>
+
                 </div>
 
             </div>
-            <div class="col-12 ttqt-right position-relative">
-                <div><img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                        width="200px"></div>
-                <div>
-                    <p>hihejsdnkasdnnls</p>
-                    <p class="position-absolute">10/10/2001</p>
-                </div>
-
-            </div>
-            <div class="col-12 ttqt-right position-relative">
-                <div><img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                        width="200px"></div>
-                <div>
-                    <p>hihejsdnkasdnnls</p>
-                    <p class="position-absolute">10/10/2001</p>
-                </div>
-
-            </div>
-            <div class="col-12 ttqt-right position-relative">
-                <div><img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                        width="200px"></div>
-                <div>
-                    <p>hihejsdnkasdnnls</p>
-                    <p class="position-absolute">10/10/2001</p>
-                </div>
-
-            </div>
-            <div class="col-12 ttqt-right position-relative">
-                <div><img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                        width="200px"></div>
-                <div>
-                    <p>hihejsdnkasdnnls</p>
-                    <p class="position-absolute">10/10/2001</p>
-                </div>
-
-            </div>
-           </div>
         </div>
     </div>
 
