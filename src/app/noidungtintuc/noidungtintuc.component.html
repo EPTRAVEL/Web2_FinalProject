@@ -7,7 +7,7 @@
             <div class="noidungtintuc-container-left">
                 <div style="margin: 30px">
                     <div id="Load_Content" *ngFor="let t of tintuc" [class.d-none]="t.tintuc_id==selectedId?false:true">
-                        <div> {{t.content}}</div>
+                        <div [innerHTML]="t.content"></div>
                         <br>
                         <hr>
                     </div>

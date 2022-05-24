@@ -3,53 +3,34 @@
         <div class="row">
             <span class="badge">TIN TỨC DU LỊCH</span>
         </div>
-        <!-- <div class="tintuc-main-box">
-            <div class="tintuc-main-box__left" *ngFor="let t of tintuc;first as isFirst">
+        <div class="tintuc-main-box">
+            <div class="tintuc-main-box__left" *ngFor="let t of tintuc;first as isFirst" [class.d-none]="t.tintuc_id==1?false:true">
                 <div *ngIf="isFirst">
                     <a><img class="tintuc-left-img" src="{{t.main_img}}" alt="Error" style="z-index: 1;"></a>
                     <div>
                         <div style="margin-top: 10px;" class="tintuc-main-box-left__contentanday">
-                            <a class="tintuc-font-big-header"></a>
+                            <a class="tintuc-font-big-header">{{t.header}}</a>
                         </div>
                         <div class="tintuc-main-box-left__contentanday">
-                            <span class="tintuc-style-day-written"></span>
+                            <span class="tintuc-style-day-written">{{t.date}}</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tintuc-main-box__right">
-                <div class="tintuc-main-box-right__item">
+                <div class="tintuc-main-box-right__item" *ngFor="let t of tintuc" [class.d-none]="t.tintuc_id==2||t.tintuc_id==3||t.tintuc_id==4?false:true">
                     <div>
-                        <a><img class="tintuc-right-img" src="../assets/images/IMAGE/SanPham/TrongNuoc/MienNam/VungTau/VungTau2.jpg"></a>
+                        <a><img class="tintuc-right-img" src="{{t.main_img}}"></a>
                     </div>
                     <div style="margin-left:20px;">
-                        <a class="tintuc-font-medium-header">DU LỊCH VŨNG TÀU VÀ NHỮNG ĐIỀU CẦN BIẾT</a>
-                        <div class="tintuc-style-day-written">10/10/2022</div>
-                    </div>
-                </div>
-                <div class="tintuc-main-box-right__item">
-                    <div>
-                        <a><img class="tintuc-right-img" src="../assets/images/IMAGE/SanPham/TrongNuoc/MienNam/VungTau/VungTau2.jpg"></a>
-                    </div>
-                    <div style="margin-left: 20px;">
-                        <a class="tintuc-font-medium-header">DU LỊCH VŨNG TÀU VÀ NHỮNG ĐIỀU CẦN BIẾT</a>
-                        <div class="tintuc-style-day-written">10/10/2022</div>
-                    </div>
-
-                </div>
-                <div class="tintuc-main-box-right__item">
-                    <div>
-                        <a><img class="tintuc-right-img" src="../assets/images/IMAGE/SanPham/TrongNuoc/MienNam/VungTau/VungTau2.jpg"></a>
-                    </div>
-                    <div style="margin-left: 20px;">
-                        <a class="tintuc-font-medium-header">DU LỊCH VŨNG TÀU VÀ NHỮNG ĐIỀU CẦN BIẾT</a>
-                        <div class="tintuc-style-day-written">10/10/2022</div>
+                        <a class="tintuc-font-medium-header">{{t.header}}</a>
+                        <div class="tintuc-style-day-written">{{t.date}}</div>
                     </div>
                 </div>
             </div>
 
-        </div> -->
-        <div class="tintuc-box {{isSelected(t)? 'selected':''}}" *ngFor="let t of tintuc" (click)="onSelect(t)">
+        </div>
+        <div class="tintuc-box {{isSelected(t)? 'selected':''}}" *ngFor="let t of tintuc;first as isFirst" (click)="onSelect(t)" [class.d-none]="t.tintuc_id>4?false:true">
             <div class="tintuc-box-item__left">
                 <div>
                     <a routerLink="/noidungtintuc/{{t.tintuc_id}}" routerLinkActive="active">

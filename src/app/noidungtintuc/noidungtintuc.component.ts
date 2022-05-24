@@ -10,7 +10,7 @@ import { TintucService } from '../service/tintuc.service';
 export class NoidungtintucComponent implements OnInit {
 
   selectedId:any;
-  tintuc:any[]=[];
+  tintuc:any;
   errMessage:string='';
   message:string="";
 
@@ -33,4 +33,6 @@ export class NoidungtintucComponent implements OnInit {
     goBack():void{
       this.router.navigate(['/noidungtintuc',{id:this.selectedId}])
     }
+
+   
 }
