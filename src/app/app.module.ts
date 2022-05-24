@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 import { YeuthichComponent } from './yeuthich/yeuthich.component'; 
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +48,8 @@ import { YeuthichComponent } from './yeuthich/yeuthich.component';
     CommonModule,
     SlickCarouselModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

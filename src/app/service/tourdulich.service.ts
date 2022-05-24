@@ -16,6 +16,12 @@ export class TourdulichService {
         retry(2), catchError(this.handleError)
       )
   }
+  getDataTourWithCondition(condi: string): Observable<Tour[]> {
+    return this._http.get<Tour[]>(`${this.url}/${condi}`)
+      .pipe(
+        retry(2), catchError(this.handleError)
+      )
+  }
   handleError(err: HttpErrorResponse) {
     return throwError(() => new Error(err.message)
     )

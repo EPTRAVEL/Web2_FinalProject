@@ -39,6 +39,10 @@ const routes: Routes = [
     component: NoidungtintucComponent,
   },
   {
+    path: 'tourdulich/:ma_tour',
+    component: ChitiettourComponent,
+  },
+  {
     path: 'thanhtoan',
     component: ThanhtoanComponent,
   },
