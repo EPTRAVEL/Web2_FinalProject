@@ -1,3 +1,4 @@
+import { ThongtinkhachhangComponent } from './thongtinkhachhang/thongtinkhachhang.component';
 import { ThongtinComponent } from './thongtin/thongtin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'yeuthich',
     component: YeuthichComponent,
+  },
+  {
+    path: 'thongtinkhachhang',
+    component:ThongtinkhachhangComponent,
   },
   {
     path: 'tourdulich/:quocgia/:ma_tour',

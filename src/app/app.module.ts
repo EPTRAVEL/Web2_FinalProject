@@ -22,6 +22,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 import { YeuthichComponent } from './yeuthich/yeuthich.component'; 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ThongtinkhachhangComponent } from './thongtinkhachhang/thongtinkhachhang.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     TourdulichComponent,
     ChitiettourComponent,
     YeuthichComponent,
+    ThongtinkhachhangComponent,
   ],
   imports: [
     BrowserModule,
