@@ -50,7 +50,7 @@
                     (beforeChange)="beforeChange($event)">
 
                     <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
-                        <div class='khuyenmai_sp' *ngIf="(t.giamgia !=0 && t.quocgia == 'Tour du lịch trong nước')?true:false">
+                        <div class='khuyenmai_sp'>
                             <img src="{{ t.images[2] }}" alt="" width="100%">
                             <div class='khuyenmai_sp--content'>
                                 <h3 class='khuyenmai_text'>{{t.ten_tour}}</h3>
@@ -86,7 +86,7 @@
                     (beforeChange)="beforeChange($event)">
 
                     <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
-                        <div class='khuyenmai_sp' *ngIf="(t.giamgia !=0 && t.quocgia == 'Tour du lịch nước ngoài')?true:false">
+                        <div class='khuyenmai_sp'>
                             <img src="{{ t.images[2] }}" alt="" width="100%">
                             <div class='khuyenmai_sp--content'>
                                 <h3 class='khuyenmai_text'>{{t.ten_tour}}</h3>

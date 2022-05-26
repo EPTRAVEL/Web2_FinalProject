@@ -36,6 +36,9 @@ export class ChitiettourComponent implements OnInit {
       //   this.show_tour = false;
       // }
   }
+  XuLyYeuThich(){
+    alert('Xử lý yêu thích nhá')
+  }
   check( a:string ){
     if(this.selectedTour === a){
       return true;

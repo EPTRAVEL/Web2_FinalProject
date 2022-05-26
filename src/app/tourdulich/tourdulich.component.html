@@ -7,11 +7,11 @@
     <div class="row">
         <div class="col-10"></div>
         <div class="sapxep-select col-2 ">
-            <select name="Sắp xếp" class="form-select mb-3 ">
+            <select name="Sắp xếp" (change)="onChangeSapXep($event.target)" class="form-select mb-3 " #ChangeSapXep>
                 <option value="sapxep">--Sắp xếp theo--</option>
-                <option value="thap-cao">Theo giá thấp đến cao</option>
-                <option value="thap-cao">Theo giá cao đến thấp</option>
-                <option value="thap-cao">Giảm giá nhiều nhất</option>
+                <option value="thapcao">Theo giá thấp đến cao</option>
+                <option value="caothap">Theo giá cao đến thấp</option>
+                <option value="ggcaothap">Giảm giá nhiều nhất</option>
             </select>
         </div>
     </div>
@@ -76,8 +76,8 @@
         <div class="col-lg-9 col-md-12 text-center">
             <div class="category">
                     <div class="card m-2 card-tour"
-                        *ngFor="let datatour of tour" (click)="onSelect(datatour)">
-                        <div class="card-img-top">
+                        *ngFor="let datatour of tour" >
+                        <div class="card-img-top" (click)="onSelect(datatour)">
                             <img class="img-thumnail" style="height: 100%; width: 100%;" src="{{datatour.images[0]}}"
                             alt="error">
                         </div>
@@ -87,24 +87,33 @@
                             <p class="tour-item__departure">Nơi khởi hành:
                                 <span> {{ datatour.noikhoihanh }} </span>
                             </p>
-                            <div class="tour-item__price--current__number">Giá
-                                <span id="tour-item__price--current__number">{{ datatour.giatiennguoilon | number }}đ</span>/Khách
+                            <div class="tour-item__price--current__number">
+                                <span class="text-black" [class.d-none]="datatour.giamgia=='0'" [class.text-decoration-line-through]  ="datatour.giamgia!='0'" id="tour-item__price--current__number">{{ datatour.giatiennguoilon | number }}đ</span>
+                                <br>
+
+                                <div [class.d-none]="datatour.giamgia=='0'">
+                                    Giảm: {{ datatour.giatiennguoilon*datatour.giamgia/100 | number }}đ
+                                </div>
+
+                                Giá
+                                <span id="tour-item__price--current__number">{{ datatour.giatiennguoilon*(100-datatour.giamgia)/100 | number }}đ</span>/Khách
+                              
                             </div>
                             <div class="tour-item__price--current">
-                                <button class="btn btn-danger  btn-book">
+                                <button (click)="DatNgay()" class="btn btn-danger  btn-book">
                                     <i class="bi bi-cart-plus-fill"></i>
                                     Đặt
                                     ngay
                                 </button>
-                                <button class="btn btn-block border border-secondary">
+                                <button (click)="onSelect(datatour)" class="btn  border border-secondary" style="z-index: 10 ;">
 
                                     Xem chi tiết
 
                                 </button>
                             </div>
-                            <button
+                            <button (click)="XuLyYeuThich()"
                                 class="tour-item__footer__add-to-compare d-inline-flex align-items-center addcomparegrid">
-                                <a href="" class="link-danger"><i class="bi bi-plus-circle-fill"></i> Thêm
+                                <a  class="link-danger"><i class="bi bi-plus-circle-fill"></i> Thêm
                                     vào
                                     yêu thích
                                 </a>

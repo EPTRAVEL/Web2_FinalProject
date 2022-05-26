@@ -29,6 +29,14 @@ export class TourdulichService {
   listTourbyMaTour() {
     return this._http.get
   }
+
+  getTourKhuyenMai(): Observable<Tour[]>{
+    return this._http.get<Tour[]>(`${this.url}/khuyenmai`)
+    .pipe(
+      retry(2), catchError(this.handleError)
+    )
+  }
+ 
 }
 
 

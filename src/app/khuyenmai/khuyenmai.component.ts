@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KhuyenmaiComponent implements OnInit {
   tour: any;
+  tourKMTN: any;
+  tourKMNN: any;
+
   errorMsg: string = "";
-  
- 
+
+
   slideConfig = {
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -43,7 +46,8 @@ export class KhuyenmaiComponent implements OnInit {
       },
     ],
   };
-  
+
+
   slickInit(e: any) {
     console.log('slick initialized');
   }
@@ -56,7 +60,7 @@ export class KhuyenmaiComponent implements OnInit {
   beforeChange(e: any) {
     console.log('beforeChange');
   }
-  constructor(private _service:TourdulichService) { }
+  constructor(private _service: TourdulichService) { }
 
   ngOnInit(): void {
     this._service.getDataTour().subscribe(
@@ -64,6 +68,15 @@ export class KhuyenmaiComponent implements OnInit {
         next: (data) => this.tour = data,
         error: (err) => this.errorMsg = err.message
       })
+    //  this.tour.filter((obj) => {
+    //   return obj.quocgia === "Tour du lịch nước ngoài";
+    // });
+
+
+
+
+
+    
   }
 
 }

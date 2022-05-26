@@ -51,7 +51,8 @@ import { ThongtinkhachhangComponent } from './thongtinkhachhang/thongtinkhachhan
     SlickCarouselModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
