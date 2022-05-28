@@ -52,10 +52,7 @@ export class DangKyComponent implements OnInit {
     formData.append('pass', data.pass);
     formData.append('file', this.file);
     console.log('FormData:', formData);
-    for (let pair of formData.entries()) {
-      //cấu hình entries trong tsconfig.json
-      console.log(pair[0], pair[1]);
-    }
+  
     this._service.uploadData(formData).subscribe({
       next: res=>{
         console.log(res);
