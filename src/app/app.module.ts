@@ -23,6 +23,8 @@ import { ChitiettourComponent } from './chitiettour/chitiettour.component';
 import { YeuthichComponent } from './yeuthich/yeuthich.component'; 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ThongtinkhachhangComponent } from './thongtinkhachhang/thongtinkhachhang.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DangnhapComponent } from './dangnhap/dangnhap.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { ThongtinkhachhangComponent } from './thongtinkhachhang/thongtinkhachhan
     ChitiettourComponent,
     YeuthichComponent,
     ThongtinkhachhangComponent,
+    DangnhapComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { ThongtinkhachhangComponent } from './thongtinkhachhang/thongtinkhachhan
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     Ng2SearchPipeModule,
+    MatDialogModule
     
   ],
   providers: [],

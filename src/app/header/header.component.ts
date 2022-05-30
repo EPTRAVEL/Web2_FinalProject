@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TourdulichService } from '../service/tourdulich.service';
 
+import {MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DangnhapComponent } from '../dangnhap/dangnhap.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -21,7 +23,7 @@ export class HeaderComponent implements OnInit {
   cap1: string = "";
   trongnuoc_b: string = "";
   ngoainuoc_b: string = "";
-  constructor(private _service: TourdulichService) { }
+  constructor(private _service: TourdulichService, private matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this._service.getDataTour().subscribe(
@@ -42,6 +44,12 @@ export class HeaderComponent implements OnInit {
     }
     // this.search_focus == 'search_black' ? 'search_white' : 'search_black'
   }
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    this.matDialog.open(DangnhapComponent, dialogConfig);
+  }
+
   changeHeart(){
     if(this.btnHeart=='bi-heart')
     {

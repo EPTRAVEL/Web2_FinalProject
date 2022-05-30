@@ -22,16 +22,20 @@
                 <h4 class="text-center p-2">LỌC KẾT QUẢ</h4>
                 <div>
                     <select name="quocgia" id="quocgia" class="form-select select-item" formControlName="quocgia">
-                        <option value="all">--Chọn quốc gia--</option>
+                        <option value="">--Chọn quốc gia--</option>
                         <option value="Tour du lịch trong nước">Tour trong nước</option>
                         <option value="Tour du lịch nước ngoài">Tour ngoài nước</option>
                     </select>
                 </div>
                 <div>
                     <select name="khuvuc" id="khuvuc" class="form-select select-item" formControlName="khuvuc">
-                        <option value="all">--Chọn khu vực--</option>
-                        <option value="Tour trong nước">Tour trong nước</option>
-                        <option value="Tour ngoài nước">Tour ngoài nước</option>
+                        <option value="">--Chọn quốc gia--</option>
+                        <option value="Tour trong nước">Châu Á</option>
+                        <option value="Tour ngoài nước">Châu Âu</option>
+                        <option value="Tour ngoài nước">Châu Mỹ</option>
+                        <option value="Tour ngoài nước">Miền Bắc</option>
+                        <option value="Tour ngoài nước">Miền Trung</option>
+                        <option value="Tour ngoài nước">Miền Nam</option>
                     </select>
                 </div>
 
@@ -44,14 +48,14 @@
                 </div> -->
                 <div>
                     <select name="noikhoihanh" id="diemdi" class="form-select select-item" formControlName="noikhoihanh">
-                        <option value="all">--Nơi Khởi Hành--</option>
+                        <option value="">--Nơi Khởi Hành--</option>
                         <option value="Hà Nội">Hà Nội</option>
                         <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
                     </select>
                 </div>
                 <div>
                     <select name="diemden" id="diemden" class="form-select select-item" formControlName="diemden">
-                        <option value="all">--Điểm đến--</option>
+                        <option value="">--Điểm đến--</option>
                         <option value="Pháp">Pháp</option>
                         <option value="Thụy Sĩ">Thụy Sĩ</option>
                         <option value="Nhật Bản">Nhật Bản</option>
@@ -62,14 +66,15 @@
                 </div>
                 <div>
                     <select name="thoigian" id="songaytour" class="form-select select-item" formControlName="thoigian">
-                        <option value="all">--Số ngày tour--</option>
+                        <option value="">--Số ngày tour--</option>
                         <option value="4-7 ngày">4-7 ngày</option>
                         <option value="8-14 ngày">8-14 ngày</option>
                         <option value="Trên 14 ngày">Trên 14 ngày</option>
                     </select>
                 </div>
+                <input type="submit" value="Tìm kiếm" class="form-btn btn btn-primary">
             </div>
-            <input type="submit" value="Tìm kiếm" class="form-btn btn btn-primary">
+     
             <p>{{condiForm.value|json}}</p>
            </form>
         </div>
