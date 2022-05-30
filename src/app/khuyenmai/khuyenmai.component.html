@@ -1,6 +1,6 @@
 <div class="container" style="height: 1800px;">
-    <div class="justify-content-center">
-        <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+    <div class="row slider-one  justify-content-center bg-opacity-75">
+        <div class="col-12 h-100 carousel slide" id="carouselExampleIndicators" data-ride="carousel">
             <!-- <ul class="carousel-indicators">
                 <li data-bs-slide-to="0" class="active"></li>
                 <li data-bs-slide-to="1"></li>
@@ -42,15 +42,15 @@
         </div>
     </div>
     <div style="height: 700px;">
-        <div class="bg-trongnuoc">
+        <div class="bg-trongnuoc container">
             <p class="font">Tour Trong Nước</p>
-            <div>
+            <div class="row slider-three">
                 <ngx-slick-carousel class="ms-2 carousel-three" #slickModal="slick-carousel" [config]="slideConfig"
                     (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
                     (beforeChange)="beforeChange($event)">
 
-                    <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
-                        <div class='khuyenmai_sp'>
+                    <div ngxSlickItem *ngFor="let t of tour" class="col-12 col-sm-6 col-md-2 slider-three slider-three-item">
+                        <div class='khuyenmai_sp d-block justify-content-center'>
                             <img src="{{ t.images[2] }}" alt="" width="100%">
                             <div class='khuyenmai_sp--content'>
                                 <h3 class='khuyenmai_text'>{{t.ten_tour}}</h3>
@@ -78,15 +78,15 @@
     </div>
 
     <div style="height: 400px;">
-        <div class="bg-ngoainuoc">
+        <div class="bg-ngoainuoc container">
             <p class="font">Tour Ngoài Nước</p>
-            <div>
+            <div class="row slider-three">
                 <ngx-slick-carousel class="ms-2 carousel-three" #slickModal="slick-carousel" [config]="slideConfig"
-                    (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                    (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (slidesToShow)= "1"
                     (beforeChange)="beforeChange($event)">
 
-                    <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
-                        <div class='khuyenmai_sp'>
+                    <div ngxSlickItem *ngFor="let t of tour" class="col-12 col-sm-6 col-md-2 slider-three slider-three-item">
+                        <div class='khuyenmai_sp d-block justify-content-center' >
                             <img src="{{ t.images[2] }}" alt="" width="100%">
                             <div class='khuyenmai_sp--content'>
                                 <h3 class='khuyenmai_text'>{{t.ten_tour}}</h3>
