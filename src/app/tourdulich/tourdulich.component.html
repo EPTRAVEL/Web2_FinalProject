@@ -2,12 +2,12 @@
     <!-- container: fixed
     container-fluid: full màn hình -->
     <div class="text-center p-2 mt-3 mb-3 title-tourdulich">
-        <h4 class="font-weight-bold">DU LỊCH MIỀN BẮC</h4>
+        DU LỊCH MIỀN BẮC
     </div>
     <div class="row">
         <div class="col-10"></div>
         <div class="sapxep-select col-2 ">
-            <select name="Sắp xếp" (change)="onChangeSapXep($event.target)" class="form-select mb-3 " #ChangeSapXep>
+            <select name="Sắp xếp" (change)="onChangeSapXep($event.target)" class="form-select mb-3" #ChangeSapXep>
                 <option value="sapxep">--Sắp xếp theo--</option>
                 <option value="thapcao">Theo giá thấp đến cao</option>
                 <option value="caothap">Theo giá cao đến thấp</option>
@@ -15,10 +15,10 @@
             </select>
         </div>
     </div>
-    <div class="row m-30">
-        <div class="col-lg-3 sticky-lg-top col-md-12 ">
+    <div class="row m-30 ">
+        <div class=" col-xl-3 col-md-12">
            <form [formGroup]="condiForm"  (ngSubmit)="onSubmit(condiForm)">
-            <div class="locsanpham-select p-sticky">
+            <div class="locsanpham-select">
                 <h4 class="text-center p-2">LỌC KẾT QUẢ</h4>
                 <div>
                     <select name="quocgia" id="quocgia" class="form-select select-item" formControlName="quocgia">
@@ -78,7 +78,7 @@
             <p>{{condiForm.value|json}}</p>
            </form>
         </div>
-        <div class="col-lg-9 col-md-12 text-center">
+        <div class="col-lg-12 col-xl-9 col-md-12 text-center">
             <div class="category">
                     <div class="card m-2 card-tour"
                         *ngFor="let datatour of tour" >
@@ -87,7 +87,7 @@
                             alt="error">
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title m-2">{{datatour.ten_tour}}</h5>
+                            <h3 class="card-title m-2">{{datatour.ten_tour}}</h3>
                             <p class="tour-item__code"> Mã Tour: {{ datatour.ma_tour }}</p>
                             <p class="tour-item__departure">Nơi khởi hành:
                                 <span> {{ datatour.noikhoihanh }} </span>

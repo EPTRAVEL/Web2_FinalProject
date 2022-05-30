@@ -47,3 +47,10 @@ a{
         transform: scale(1)
     }
 }
+@media screen and (max-width:992px){
+    
+    .image{
+        margin: 0 10px;
+    }
+   
+}

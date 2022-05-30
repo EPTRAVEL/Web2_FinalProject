@@ -1,10 +1,18 @@
+
 .title-tourdulich{
     border-radius: 5px;
     background-color: rgba(85, 85, 85,0.5);
     color: white;
+    font-weight: bold;
+    font-size: larger;
 }
+.card-title{
+    font-weight: bold;
+
+}
+
 .card-img-top{
-    height: 300px;
+    height: 260px;
 }
 .sapxep-select{
     align-items: right;
@@ -20,6 +28,8 @@
     background-color: rgba(85, 85, 85,0.5);
     color: white;
     border-radius: 10px;
+    position: fixed;
+    width: 18%;
 }
 .tour-item__price--current{
     display: flex;
@@ -41,6 +51,9 @@
 a{
     text-decoration: none
 }
+.form-search{
+    position: fixed;
+}
 .category{
     display: flex;
     justify-content: center;
@@ -58,30 +71,57 @@ a{
 @media screen and (max-width:1980px){
     .card-tour{
         width: 300px;
-        min-width: 250px;
+        min-width: 50px;
         
     }
 }
 @media screen and (max-width:1616px){
     .card-tour{
-        width: 400px;
-        min-width: 250px;
+        width: 300px;
+        min-width: 20px;
         
         margin: 0 10px;
+    }
+    .category{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width:1427px){
     .card-tour{
-        width: 80%;
-        min-width: 300px;
+width: 300px;
+        min-width: 100px;
         
         margin: 0 10px;
     }
+    .category{
+        margin-top: 70px;
+    }
+    
+    
 }
+@media screen and (max-width:1200px){
+    
+    .locsanpham-select{
+        display: flex;
+        position: fixed;
+        width: auto;
+        z-index: 1;
+    }
+   
+}
+
 @media screen and (max-width:990px){
     .card-tour{
         width: 90%;
         min-width: 250px;
         
+    }
+    .locsanpham-select{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: auto;
     }
 }
