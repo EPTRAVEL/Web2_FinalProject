@@ -23,3 +23,10 @@ p{
     
     /* font-weight: bold */
 }
+.img_bank{
+    width: 60px;
+    margin: 1px 0; 
+}
+.img_logo{
+    width: 50px;
+}

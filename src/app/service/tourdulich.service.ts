@@ -7,8 +7,8 @@ import { Tour } from '../interface/tour';
   providedIn: 'root'
 })
 export class TourdulichService {
-  url: string = "http://localhost:8000/Tours"
-  // url: string = "../assets/data/tour.json"
+  // url: string = "http://localhost:8000/Tours"
+  url: string = "../assets/data/tour.json"
   constructor(private _http: HttpClient) { }
   getDataTour(): Observable<Tour[]> {
     return this._http.get<Tour[]>(this.url)
