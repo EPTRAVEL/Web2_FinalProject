@@ -11,41 +11,8 @@
     font-family: Fester_Bold;
 }
 
-.text-divider {
-    display: flex;
-    align-items: center;
-    --text-divider-gap: 1rem;
-    width: 1017px;
-    margin-left: 30px;
-}
-
-.text-divider::before,
-.text-divider::after {
-    content: '';
-    height: 1px;
-    background-color: #333;
-    flex-grow: 1;
-}
-
-.text-divider::before {
-    width: 1%;
-}
-
-.text-divider::after {
-    width: 50%;
-}
-
-.text-divider::before {
-    margin-right: var(--text-divider-gap);
-}
-
-.text-divider::after {
-    margin-left: var(--text-divider-gap);
-}
-
 .border-hanhkhach {
     border: 1px solid black;
-    border-top: none;
     margin-top: -40px;
     margin-left: 30px;
     margin-right: 30px;
@@ -58,29 +25,23 @@
 }
 
 .tongcong {
-    margin-left: 80px;
+    margin-left: 10%;
 }
 
 .pttt {
-    margin-left: 80px;
+    margin-left: 10%;
 }
 
 .input-themma {
     width: 100px;
-    height: 35px;
 }
 
 .btn-apdung {
     background-color: #5DA9DD;
     color: white;
-    height: 35px;
-    text-align: center;
-    font-size: 13px;
-    border-radius: 5px;
     border: none;
-    border-right: 1px solid grey;
-    border-bottom: 1px solid grey;
-    margin-left: 5px;
+    width: 100px;
+    border-radius: 5px;
 }
 
 .chonphuongthuc {
@@ -103,7 +64,3 @@
     border-bottom: 1px solid grey;
     margin: 20px auto;
 }
-
-@media screen and (max-width:700px) {}
-
-@media only screen and (max-width:480px) {}
