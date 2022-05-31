@@ -56,42 +56,19 @@
                 Tin tức du lịch
             </div>
             <div class="ttdl" style="width: 100%;">
-                <div class="row text-center">
+                <div class="row text-center" *ngFor="let t of tour">
                     <div class="col-sm-6">
-                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
+                        <img src="{{base_url + t.images[1]}}" alt="Error"
                             width="90%">
-                        <p>hello nguyên đăng khoa</p>
+                        
                     </div>
                     <div class="col-sm-6 ">
-                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
+                        <img src="{{base_url + t.images[3]}}" alt="Error"
                             width="90%">
-                        <p>hello nguyên đăng khoa</p>
+                        <!-- <p>hello nguyên đăng khoa</p> -->
                     </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-sm-6">
-                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                            width="90%">
-                        <p>hello nguyên đăng khoa</p>
-                    </div>
-                    <div class="col-sm-6 ">
-                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                            width="90%">
-                        <p>hello nguyên đăng khoa</p>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-sm-6">
-                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                            width="90%">
-                        <p>hello nguyên đăng khoa</p>
-                    </div>
-                    <div class="col-sm-6 ">
-                        <img src="./assets/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error"
-                            width="90%">
-                        <p>hello nguyên đăng khoa</p>
-                    </div>
-                </div>
+               
             </div>
         </div>
 

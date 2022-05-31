@@ -13,7 +13,7 @@ export class ChitiettourComponent implements OnInit {
   errorMsg: string = "";
   show_tour: boolean = true;
   constructor(private _service: TourdulichService,  private _activatedRoute: ActivatedRoute) { }
-
+  base_url: string = 'http://localhost:8000/Tours/'
 
   ngOnInit(): void {
     this._activatedRoute.paramMap.subscribe(

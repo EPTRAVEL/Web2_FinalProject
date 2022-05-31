@@ -23,6 +23,10 @@ a{
 .group-price{
     padding: 50px 30px;
 }
+ .image{
+    width: 200px;
+    border-radius: 10px;
+}
 .price{
     font-weight: bold;
 }
