@@ -20,11 +20,13 @@ img {
 input {
   border-radius: 2px;
   border: 1px solid black;
-  height: 30px;
+  height: 40px;
   width: 87%;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
 }
-
+.h1{
+  font-family: Fester_Bold;
+}
 button {
   border: none;
   border-radius: 5px;

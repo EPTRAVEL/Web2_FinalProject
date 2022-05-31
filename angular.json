@@ -77,6 +77,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options":{
+            "port": 5000
+          },
           "configurations": {
             "production": {
               "browserTarget": "ept:build:production"
