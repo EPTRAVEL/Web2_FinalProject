@@ -1,18 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FavService } from '../service/fav.service';
 import { TourdulichService } from '../service/tourdulich.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-tourdulich',
   templateUrl: './tourdulich.component.html',
   styleUrls: ['./tourdulich.component.css']
 })
 export class TourdulichComponent implements OnInit {
+  base_url: string = 'http://localhost:8000/Tours/'
   tour: any;
   tour2: any;
   errorMsg: string = "";
   selectedTour: any;
   value: string[] = [];
+
+  yeuthich = new Array();
 
   quocgia: string = "";
   khuvuc: string = "";
@@ -27,7 +32,7 @@ export class TourdulichComponent implements OnInit {
     thoigian: [''],
   })
 
-  constructor(private _service: TourdulichService, private _router: Router, private _activatedRoute: ActivatedRoute, private _formBuilder: FormBuilder) { }
+  constructor(private _serviceTour: TourdulichService, private _serviceFav: FavService, private _router: Router, private _activatedRoute: ActivatedRoute, private _formBuilder: FormBuilder, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.getDataTour()
@@ -83,18 +88,107 @@ export class TourdulichComponent implements OnInit {
     alert('xử lý đặt ngay')
   }
   getDataTour() {
-    this._service.getDataTour().subscribe(
+    this._serviceTour.getDataTour().subscribe(
       {
         next: (data) => this.tour = data,
         error: (err) => this.errorMsg = err.message
       })
   }
-  XuLyYeuThich() {
-    alert("Xử lý yêu thích")
+  XuLyYeuThich(datatour: any) {
+    alert("Xử lý yêu thích");
+
+    let userLogin = JSON.parse(localStorage.getItem("UserLogin") || '{}');;
+    if (userLogin._id) { //Tương lai thêm check JWT
+
+      this._serviceFav.checkFav({
+        userId: userLogin._id,
+      }).subscribe({
+        next: (res) => {
+          let res_data = JSON.parse(JSON.stringify(res));
+          if (res_data.message == "Đã có") {
+            // Update Fav
+            let ytTemp = new Array(datatour._id);
+            this.yeuthich.push(ytTemp)
+
+            this.setData("yeuthich", this.yeuthich)
+
+            let yt = JSON.parse(this.getData("yeuthich")||'{}')
+            this._serviceFav.updateFav({
+              userId: userLogin._id,
+              TourList: [yt]
+            }).subscribe({
+              next: (res) => {
+                
+                
+                this.toastr.info('Thêm yêu thích', 'Thành công', {
+                  timeOut: 3000,
+                });
+              },
+              error: err => {
+                console.log(err.message);
+                this.toastr.error('False', 'so false', {
+                  timeOut: 3000,
+                });
+              }
+            })
+          }
+          if (res_data.message == "Chưa có") {
+            // Thêm Fav
+            this._serviceFav.createFav({
+              userId: userLogin._id,
+              tourId: datatour._id
+            }).subscribe({
+              next: (res) => {
+                this.yeuthich.push(datatour._id)
+                this.toastr.info('Thêm yêu thích', 'Thành công', {
+                  timeOut: 3000,
+                });
+              },
+              error: err => {
+                console.log(err.message);
+                this.toastr.error('False', 'so false', {
+                  timeOut: 3000,
+                });
+              }
+            })
+          }
+
+
+        },
+        error: err => {
+          console.log(err.message);
+          this.toastr.error('False', 'so false', {
+            timeOut: 3000,
+          });
+        }
+      })
+
+
+    }
+    else {
+      this.toastr.error('Thêm yêu thích', 'Bạn phải đăng nhập mới có thể thêm vào yêu thích', {
+        timeOut: 3000,
+      });
+    }
+
+    // })
+    // add vao fav
   }
 
   onSelect(data: any): void {
     // console.log(data)
     this._router.navigate(['/tourdulich', data.ma_tour])
+  }
+  setData(name: string, data: any) {
+    const jsonData = JSON.stringify(data)
+    localStorage.setItem(name, jsonData)
+  }
+
+  getData(name: string) {
+    return localStorage.getItem(name)
+  }
+
+  removeData(name: any) {
+    localStorage.removeItem(name)
   }
 }

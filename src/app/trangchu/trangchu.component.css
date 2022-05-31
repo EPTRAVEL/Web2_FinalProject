@@ -1,5 +1,6 @@
 .slider-one {
   /* height: 330px; */
+  width: 100%;
 }
 
 .slider-one:first-child {
@@ -128,63 +129,72 @@
 }
 
 .two-col {
-  height: 550px;
-  margin-bottom: 20px;
+  /* height: 550px; */
+  /* width: 100%;
+  margin-bottom: 20px; */
   /* background-color: red; */
-  position: relative;
+  /* position: relative; */
 }
 
 .ttdl {
   background-color: rgba(255, 255, 255, 0.6) !important;
-  flex: 22;
+  /* flex: 22; */
   border-radius: 10px;
   height: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 5px 100px;
-  margin-top: 50px;
+  /* padding: 5px 100px; */
+  /* margin-top: 50px; */
   text-align: center;
   align-items: center;
-}
+  margin-bottom: 10px;
+  width: 100%;
 
+}
+.ttdl-tour{
+  margin: 10px;
+}
 .ttld-header {
-  position: absolute;
-  top: 0px;
+  /* position: absolute;
+  top: 0px; */
   background-color: rgba(0, 0, 0, 0.4);
   font-family: Fester_Bold;
   font-size: 25px;
   border-radius: 10px;
   text-align: center;
-  width: 500px;
+  width: 100%;
   line-height: 35px;
-  left: 0;
+  /* left: 0;
   width: 73%;
-  margin-left: -10px;
+  margin-left: -10px; */
   color: white;
+  margin: 15px 0px;
 }
 
-.ttdl .ttqt-content {
-  height: 250px;
+.ttqt-content {
+  /* height: 250px; */
   background-color: rgba(255, 0, 0, 0);
-  margin-top: 30px;
+  /* margin-top: 30px;
   display: flex;
-  margin-left: -25px;
+  margin-left: -25px; */
 }
 
 .ttqt {
   padding: 20px 10px;
   font-family: Fester_Bold;
   font-size: 20px;
+  width: 100%;
+  text-align: center;
 }
 
-.ttqt .ttqt-right {
+/* .ttqt .ttqt-right {
   height: 170px;
   background-color: rgba(0, 0, 0, 0);
   color: rgb(0, 0, 0);
   display: flex;
-}
+} */
 
-.ttqt .ttqt-right>div:first-child {
+/* .ttqt .ttqt-right>div:first-child {
   flex: 3;
   margin-right: 10px;
 }
@@ -205,14 +215,14 @@
   position: absolute;
   right: 5px;
   bottom: 15px;
-}
+} */
 
 .ttqt-contentt {
   overflow-y: scroll;
   height: 430px;
 }
 
-.ttdl .ttqt-content>div {
+/* .ttdl .ttqt-content>div {
   flex: 1;
   text-align: center;
 }
@@ -238,21 +248,22 @@
 
 .space {
   flex: 1;
-}
+} */
 
 .ttqt {
   background-color: rgba(255, 255, 255, 0.6) !important;
   flex: 10;
   border-radius: 10px;
+  margin: 15px 0px;
 }
 
 div#carouselExampleIndicators {
   padding: 0;
 }
 
-img.d-block.w-100 {
+/* img.d-block.w-100 {
   border-radius: 15px;
-}
+} */
 
 .carousel {
   /* background: #fafafa; */

@@ -83,7 +83,7 @@
                     <div class="card m-2 card-tour"
                         *ngFor="let datatour of tour" >
                         <div class="card-img-top" (click)="onSelect(datatour)">
-                            <img class="img-thumnail" style="height: 100%; width: 100%;" src="{{datatour.images[0]}}"
+                            <img class="img-thumnail" style="height: 100%; width: 100%;" src="{{base_url+datatour.images[0]}}"
                             alt="error">
                         </div>
                         <div class="card-body text-center">
@@ -116,7 +116,7 @@
 
                                 </button>
                             </div>
-                            <button (click)="XuLyYeuThich()"
+                            <button (click)="XuLyYeuThich(datatour)" class="btn"
                                 class="tour-item__footer__add-to-compare d-inline-flex align-items-center addcomparegrid">
                                 <a  class="link-danger"><i class="bi bi-plus-circle-fill"></i> Thêm
                                     vào

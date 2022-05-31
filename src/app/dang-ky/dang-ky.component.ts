@@ -53,7 +53,7 @@ export class DangKyComponent implements OnInit {
     formData.append('file', this.file);
     console.log('FormData:', formData);
   
-    this._service.uploadData(formData).subscribe({
+    this._service.register(formData).subscribe({
       next: res=>{
         console.log(res);
         this.toastr.success('Register success', 'okela!');

@@ -50,13 +50,13 @@
     }
     
     .tintuc-left-img:hover {
-        transform: scale(1.02);
+        transform: scale(0.95);
     }
     
     .tintuc-font-big-header {
         font-family: Fester_Bold;
         font-size: 32px;
-        margin-top: 20px;
+        margin-top: 25px;
         color: #0C4A6D;
     }
     
@@ -121,12 +121,13 @@
     }
     
     .tintuc-box-item__right {
-        margin: 20px;
+        margin: 30px;
     }
     
     p {
-        font-family: text-regular;
         font-size: 22px;
+        margin-top: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
     }
     
     a {
