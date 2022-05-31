@@ -22,13 +22,17 @@ export class TourdulichService {
         retry(2), catchError(this.handleError)
       )
   }
+  getDataTourById(id: string): Observable<Tour[]> {
+    return this._http.get<Tour[]>(`${this.url}/id/${id}`)
+      .pipe(
+        retry(2), catchError(this.handleError)
+      )
+  }
   handleError(err: HttpErrorResponse) {
     return throwError(() => new Error(err.message)
     )
   }
-  listTourbyMaTour() {
-    return this._http.get
-  }
+ 
 
   getTourKhuyenMai(): Observable<Tour[]>{
     return this._http.get<Tour[]>(`${this.url}/khuyenmai`)

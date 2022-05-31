@@ -9,7 +9,7 @@ import { DangnhapComponent } from '../dangnhap/dangnhap.component';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  base_url: string ="http://localhost:8000/Tours/"
   tour: any;
   errorMsg: string = "";
   selectedTour: any;

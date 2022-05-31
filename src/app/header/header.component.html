@@ -13,9 +13,9 @@
                 <ul class="text-light nav-trongngoainuocul {{cap1}}" (mouseleave)="anCap1()">
 
                     <li class="nav-trongngoainuoc nav-trongnuoc" (mouseenter)="hienTN(); anNN()">
-                        <a class="" routerLink="/tourdulich/trongnuoc" routerLinkActive="active">Tour trong nước</a>
+                        <a class="" routerLink="/tourdulich/quocgia/trongnuoc" routerLinkActive="active">Tour trong nước</a>
                         <ul class="trongngoainuoc trongnuoc {{trongnuoc_b}}" (mouseleave)="anTN()">
-                            <li>
+                            <!-- <li>
                                 <a class="" routerLink="/tourdulich/trongnuoc/mienbac" routerLinkActive="active">Miền
                                     Bắc</a>
 
@@ -29,14 +29,14 @@
                                 <a class="" routerLink="/tourdulich/trongnuoc/miennam" routerLinkActive="active">Miền
                                     Nam</a>
 
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
 
                     <li class="nav-trongngoainuoc nav-ngoainuoc" (mouseenter)="hienNN(); anTN()">
-                        <a class="" routerLink="/tourdulich/ngoainuoc" routerLinkActive="active">Tour ngoài ngước</a>
+                        <a class="" routerLink="/tourdulich/quocgia/ngoainuoc" routerLinkActive="active">Tour ngoài ngước</a>
                         <ul class="trongngoainuoc ngoainuoc {{ngoainuoc_b}}" (mouseleave)="anNN()">
-                            <li>
+                            <!-- <li>
                                 <a class="" routerLink="/tourdulich/ngoainuoc/chaua" routerLinkActive="active">Châu
                                     Á</a>
 
@@ -50,7 +50,7 @@
                                 <a class="" routerLink="/tourdulich/ngoainuoc/chaumy" routerLinkActive="active">Châu
                                     Mỹ</a>
 
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
 
@@ -85,7 +85,7 @@
                                 <table class="table">
                                     <tbody>
                                       <tr *ngFor="let t of tour | filter: searchText" routerLink="/tourdulich/{{t.ma_tour}}" routerLinkActive="active">
-                                        <td><img style="border-radius: 3px;" src="{{t.images[2]}}" width="150px" alt=""></td>
+                                        <td><img style="border-radius: 3px;" src="{{base_url+t.images[2]}}" width="150px" alt=""></td>
                                         <td>{{ t.ten_tour }}</td>
                                       </tr>
                                     </tbody>

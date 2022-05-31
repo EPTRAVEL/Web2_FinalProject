@@ -17,6 +17,8 @@ export class TourdulichComponent implements OnInit {
   selectedTour: any;
   value: string[] = [];
 
+
+  quoc_gia: any
   yeuthich = new Array();
 
   quocgia: string = "";
@@ -43,6 +45,15 @@ export class TourdulichComponent implements OnInit {
           this.selectedTour = parseInt(ma_tour)
         }
       })
+    this._activatedRoute.paramMap.subscribe(
+      (param) => {
+        let a = param.get('quocgia')
+        if (a != null) {
+          this.quoc_gia = a
+          this.getDataTourCondi(this.quoc_gia) 
+        }
+      })
+      
 
   }
 
@@ -84,8 +95,12 @@ export class TourdulichComponent implements OnInit {
   }
 
 
-  DatNgay() {
+  DatNgay(data:any) {
     alert('xử lý đặt ngay')
+    this._router.navigate(['/tourdulich/datngay', data._id])
+
+
+
   }
   getDataTour() {
     this._serviceTour.getDataTour().subscribe(
@@ -94,8 +109,14 @@ export class TourdulichComponent implements OnInit {
         error: (err) => this.errorMsg = err.message
       })
   }
+  getDataTourCondi(a: any) {
+    this._serviceTour.getDataTourWithCondition(a).subscribe(
+      {
+        next: (data) => this.tour = data,
+        error: (err) => this.errorMsg = err.message
+      })
+  }
   XuLyYeuThich(datatour: any) {
-    alert("Xử lý yêu thích");
 
     let userLogin = JSON.parse(localStorage.getItem("UserLogin") || '{}');;
     if (userLogin._id) { //Tương lai thêm check JWT

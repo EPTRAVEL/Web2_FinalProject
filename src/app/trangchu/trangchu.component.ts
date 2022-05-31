@@ -8,6 +8,7 @@ import { TourdulichService } from '../service/tourdulich.service';
 })
 export class TrangchuComponent implements OnInit {
   tour: any;
+  base_url: string = "http://localhost:8000/Tours/"
   errorMsg: string = "";
   // slides = [
   //   { img: './assets/images/IMAGE/img_temp_500x350.png' },

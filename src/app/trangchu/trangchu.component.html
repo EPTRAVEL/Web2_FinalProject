@@ -41,7 +41,7 @@
                 (beforeChange)="beforeChange($event)">
 
                 <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three slider-three-item">
-                    <img src="{{t.images[2]}}" alt="" width="100%" routerLink="/tourdulich/{{t.ma_tour}}"
+                    <img src="{{base_url + t.images[2]}}" alt="" width="100%" routerLink="/tourdulich/{{t.ma_tour}}"
                         routerLinkActive="active">
                 </div>
             </ngx-slick-carousel>
@@ -104,7 +104,7 @@
             <div class="ttqt-contentt">
                 <div class="d-flex justify-content-start" *ngFor="let t of tour">
                     <div class="p-2">
-                        <img src="{{t.images[2]}}" alt="Error" width="200px">
+                        <img src="{{base_url + t.images[2]}}" alt="Error" width="200px">
                     </div>
                     <div class="p-2" style="text-align:left;">
                         <p>{{t.ten_tour}}</p>
@@ -138,7 +138,7 @@
             (beforeChange)="beforeChange($event)">
 
             <div ngxSlickItem *ngFor="let t of tour" class="ms-4 me-4 slider-three">
-                <img src="{{t.images[3]}}}" alt="" width="100%">
+                <img src="{{base_url+ t.images[2]}}" alt="" width="100%">
                 <p class="text-center">Trung Quốc - Bắc Kinh - Thượng Hải - Hàng Châu - Tô Châu</p>
             </div>
         </ngx-slick-carousel>

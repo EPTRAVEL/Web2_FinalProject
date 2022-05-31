@@ -75,7 +75,7 @@
                 <input type="submit" value="Tìm kiếm" class="form-btn btn btn-primary">
             </div>
      
-            <p>{{condiForm.value|json}}</p>
+            <!-- <p>{{condiForm.value|json}}</p> -->
            </form>
         </div>
         <div class="col-lg-12 col-xl-9 col-md-12 text-center">
@@ -96,16 +96,16 @@
                                 <span class="text-black" [class.d-none]="datatour.giamgia=='0'" [class.text-decoration-line-through]  ="datatour.giamgia!='0'" id="tour-item__price--current__number">{{ datatour.giatiennguoilon | number }}đ</span>
                                 <br>
 
-                                <div [class.d-none]="datatour.giamgia=='0'">
+                                <!-- <div [class.d-none]="datatour.giamgia=='0'">
                                     Giảm: {{ datatour.giatiennguoilon*datatour.giamgia/100 | number }}đ
-                                </div>
+                                </div> -->
 
                                 Giá
                                 <span id="tour-item__price--current__number">{{ datatour.giatiennguoilon*(100-datatour.giamgia)/100 | number }}đ</span>/Khách
                               
                             </div>
                             <div class="tour-item__price--current">
-                                <button (click)="DatNgay()" class="btn btn-danger  btn-book">
+                                <button (click)="DatNgay(datatour)" class="btn btn-danger  btn-book">
                                     <i class="bi bi-cart-plus-fill"></i>
                                     Đặt
                                     ngay

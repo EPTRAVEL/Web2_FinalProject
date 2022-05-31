@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="motatour--content">{{t.noidungchitiet}}</div>
+                    <div class="motatour--content" [innerHTML]="t.noidungchitiet"></div>
                     <div class="overviewtour--content row">
                         <div class="box-order col-md-6 col-12 ">
                             <p>Ngày khởi hành: <b>{{t.ngaykhoihanh}}</b></p>
@@ -98,10 +98,10 @@
                 </div>
             </div>
             <div class="row--lichtrinh container">
-                <h3 class="text-center">Lịch trình</h3>
+                <h3 class="text-center" >Lịch trình</h3>
                 <hr>
-                <div class="row--lichtrinh__item">
-                    {{t.lichtrinh}}
+                <div class="row--lichtrinh__item" [innerHTML]="t.lichtrinh">
+                   
                 </div>
             </div>
        </div>

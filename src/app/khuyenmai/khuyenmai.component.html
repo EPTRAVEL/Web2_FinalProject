@@ -51,7 +51,7 @@
 
                     <div ngxSlickItem *ngFor="let t of tour" class="col-12 col-sm-6 col-md-2 slider-three slider-three-item">
                         <div class='khuyenmai_sp d-block justify-content-center'>
-                            <img src="{{ t.images[2] }}" alt="" width="100%">
+                            <img src="{{ base_url + t.images[2] }}" alt="" width="100%">
                             <div class='khuyenmai_sp--content'>
                                 <h3 class='khuyenmai_text'>{{t.ten_tour}}</h3>
                                 <p class='khuyenmai_matour'>Mã tour: {{t.ma_tour}}</p>
@@ -87,7 +87,7 @@
 
                     <div ngxSlickItem *ngFor="let t of tour" class="col-12 col-sm-6 col-md-2 slider-three slider-three-item">
                         <div class='khuyenmai_sp d-block justify-content-center' >
-                            <img src="{{ t.images[2] }}" alt="" width="100%">
+                            <img src="{{base_url + t.images[2] }}" alt="" width="100%">
                             <div class='khuyenmai_sp--content'>
                                 <h3 class='khuyenmai_text'>{{t.ten_tour}}</h3>
                                 <p class='khuyenmai_matour'>Mã tour: {{t.ma_tour}}</p>

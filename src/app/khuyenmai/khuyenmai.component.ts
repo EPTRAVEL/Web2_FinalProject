@@ -10,7 +10,7 @@ export class KhuyenmaiComponent implements OnInit {
   tour: any;
   tourKMTN: any;
   tourKMNN: any;
-
+  base_url: string ="http://localhost:8000/tours/"
   errorMsg: string = "";
 
 

@@ -40,6 +40,14 @@ const routes: Routes = [
     component: ChitiettourComponent,
   },
   {
+    path: 'tourdulich/datngay/:_id',
+    component: ThongtinComponent,
+  },
+  {
+    path: 'tourdulich/quocgia/:quocgia',
+    component: TourdulichComponent,
+  },
+  {
     path: 'thanhtoan',
     component: ThanhtoanComponent,
   },
@@ -68,12 +76,12 @@ const routes: Routes = [
     path: 'thongtinkhachhang',
     component:ThongtinkhachhangComponent,
   },
+  // {
+  //   path: 'tourdulich/:quocgia/:ma_tour',
+  //   component: ChitiettourComponent,
+  // },
   {
-    path: 'tourdulich/:quocgia/:ma_tour',
-    component: ChitiettourComponent,
-  },
-  {
-    path: 'tourdulich/:quocgia',
+    path: 'tourdulich/quocgia/:quocgia',
     component: TourdulichComponent,
   },
 ];
